@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos – Lena Roncari | La Meute est en Marche</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blanc:#fdfbf8;--creme:#f5f0e8;--creme-mid:#ede5d8;--bordeaux:#7d2d3e;--bordeaux-light:#a84059;--bordeaux-pale:#f2e4e7;--prune:#4a1a28;--terracotta:#c47855;--dore:#b8943a;--dore-pale:#f5edda;--sauge:#7a8c74;--ardoise:#2c2828;--ardoise-mid:#5a4f4a;--ardoise-light:#8a7f7a;--border:#e2d8cc}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;color:var(--ardoise);background:var(--blanc);font-weight:400;line-height:1.7;font-size:16px}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.2}
+a{color:var(--bordeaux);text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(253,251,248,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:100;padding:0 24px}
+nav .nav-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+nav .logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--ardoise)}
+nav .logo em{color:var(--bordeaux);font-style:italic}
+nav .nav-links{display:flex;align-items:center;gap:28px}
+nav .nav-links a{font-size:0.9rem;color:var(--ardoise-mid);font-weight:400;transition:color .2s}
+nav .nav-links a:hover{color:var(--bordeaux)}
+nav .nav-cta{background:var(--bordeaux);color:#fff!important;padding:8px 20px;border-radius:6px;font-weight:500;font-size:0.85rem;transition:background .2s}
+nav .nav-cta:hover{background:var(--bordeaux-light)}
+.menu-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--ardoise)}
+section{padding:100px 0}
+section.bg-creme{background:var(--creme)}
+.eyebrow{font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;color:var(--ardoise-light);font-weight:500;margin-bottom:16px}
+.section-tag{display:inline-block;font-size:0.78rem;text-transform:uppercase;letter-spacing:2px;color:var(--bordeaux);font-weight:500;margin-bottom:12px}
+.section-title{font-size:2.4rem;margin-bottom:48px}
+.btn{display:inline-block;padding:14px 32px;border-radius:6px;font-weight:500;font-size:0.95rem;transition:all .2s;cursor:pointer;border:none}
+.btn-primary{background:var(--bordeaux);color:#fff}
+.btn-primary:hover{background:var(--bordeaux-light)}
+footer{background:var(--prune);color:rgba(255,255,255,0.6);padding:40px 0;text-align:center;font-size:0.85rem}
+footer p{margin-bottom:8px}
+footer a{color:rgba(255,255,255,0.6)}
+footer a:hover{color:#fff}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* HERO */
+.hero-about{background:var(--creme);padding:100px 0 80px}
+.hero-about .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.hero-about h1{font-size:2.8rem;margin-bottom:12px}
+.hero-about .subtitle{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--ardoise-mid);font-style:italic;margin-bottom:20px}
+.hero-about .intro{color:var(--ardoise-mid);line-height:1.8;font-size:1rem}
+.id-card{background:var(--blanc);border:1px solid var(--border);border-radius:12px;padding:36px;box-shadow:0 8px 30px rgba(0,0,0,0.04)}
+.id-card h3{font-size:1.6rem;margin-bottom:4px}
+.id-card .id-title{font-size:0.95rem;color:var(--ardoise-mid);margin-bottom:16px}
+.id-card .tags{display:flex;flex-wrap:wrap;gap:8px}
+.id-card .tag{background:var(--creme);padding:6px 14px;border-radius:20px;font-size:0.78rem;color:var(--ardoise-mid);font-weight:500}
+
+/* STORY */
+.story p{color:var(--ardoise-mid);line-height:1.9;margin-bottom:20px;max-width:800px}
+
+/* ENGAGEMENT CARDS */
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.engage-card{background:var(--blanc);border:1px solid var(--border);border-radius:12px;padding:36px 28px}
+.engage-card .icon{font-size:2rem;margin-bottom:16px}
+.engage-card h3{font-size:1.3rem;margin-bottom:12px}
+.engage-card p{font-size:0.95rem;color:var(--ardoise-mid);line-height:1.7}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:28px;max-width:700px}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--border)}
+.timeline-item{position:relative;margin-bottom:36px;padding-left:20px}
+.timeline-item::before{content:'';position:absolute;left:-34px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bordeaux);border:2px solid var(--blanc)}
+.timeline-item .year{font-weight:600;font-size:0.85rem;color:var(--bordeaux);margin-bottom:4px}
+.timeline-item h4{font-size:1.1rem;margin-bottom:4px}
+.timeline-item p{font-size:0.9rem;color:var(--ardoise-light);line-height:1.6}
+
+/* CTA */
+.cta-section{background:var(--creme);padding:80px 0;text-align:center}
+.cta-section h2{font-size:2rem;margin-bottom:24px}
+
+@media(max-width:768px){
+  .menu-toggle{display:block}
+  nav .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--blanc);flex-direction:column;padding:20px;border-bottom:1px solid var(--border);gap:16px}
+  nav .nav-links.open{display:flex}
+  .hero-about .grid{grid-template-columns:1fr}
+  .hero-about h1{font-size:2rem}
+  .cards-3{grid-template-columns:1fr}
+  .section-title{font-size:1.8rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">La <em>Meute</em></a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="index.html#offres">Offres</a>
+      <a href="apropos.html">À propos</a>
+      <a href="formation-lenux.html">Formation LENUX</a>
+      <a href="faq-enfants.html">FAQ Enfants</a>
+      <a href="faq-parents.html">FAQ Parents</a>
+      <a href="index.html#contact" class="nav-cta">Contacter Lena</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-about">
+  <div class="container">
+    <div class="grid fade-up">
+      <div>
+        <p class="eyebrow">Son histoire · Sa légitimité · Son combat</p>
+        <h1>Lena Roncari — Une femme de l'intérieur</h1>
+        <p class="subtitle">Autrice · Formatrice · Experte en Protection de l'Enfance</p>
+        <p class="intro">Je ne suis pas venue à la protection de l'enfance par les études. J'y suis venue par la vie. Et c'est précisément ce qui fait ma valeur ajoutée.</p>
+      </div>
+      <div class="id-card">
+        <h3>Lena Roncari</h3>
+        <p class="id-title">Autrice · Formatrice · Experte ASE</p>
+        <div class="tags">
+          <span class="tag">Comité des Parents ASE — Haut-Rhin</span>
+          <span class="tag">Intervenante Assises Nationales 2026</span>
+          <span class="tag">Méthode LENUX</span>
+          <span class="tag">Alsace / Grand Est</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTOIRE -->
+<section class="fade-up">
+  <div class="container story">
+    <h2 class="section-title">Dix-sept ans de résistance</h2>
+    <p>Lena a traversé dix-sept ans de violence conjugale. Des enfants confiés à l'ASE, des rapports éducatifs tronqués, des audiences, des silences institutionnels. Des nuits blanches passées à relire des décisions de justice incompréhensibles, des rendez-vous où l'on parle de ses enfants comme de dossiers.</p>
+    <p>De cette expérience douloureuse est née une expertise rare : comprendre le système de protection de l'enfance de l'intérieur, comme mère et comme professionnelle. Ce double regard est sa force. Il lui permet de traduire ce que les familles ne savent pas formuler et ce que les professionnels peinent parfois à entendre.</p>
+    <p>Lena ne parle pas contre le système. Elle parle pour qu'il s'améliore. Pour que les décisions soient plus justes, les rapports plus honnêtes, les familles mieux entendues.</p>
+  </div>
+</section>
+
+<!-- ENGAGEMENT -->
+<section class="bg-creme fade-up">
+  <div class="container">
+    <h2 class="section-title">Ce qu'elle défend</h2>
+    <div class="cards-3">
+      <div class="engage-card">
+        <div class="icon">🏛️</div>
+        <h3>Réhumaniser les institutions</h3>
+        <p>Le système de protection de l'enfance ne manque pas de moyens, il manque de courage. Il faut remettre l'humain au centre des décisions.</p>
+      </div>
+      <div class="engage-card">
+        <div class="icon">👨‍👩‍👧</div>
+        <h3>Défendre les parents</h3>
+        <p>Un enfant confié n'est pas un enfant sauvé. La séparation doit être le dernier recours, jamais le premier réflexe.</p>
+      </div>
+      <div class="engage-card">
+        <div class="icon">📝</div>
+        <h3>Former les professionnels</h3>
+        <p>Les éducateurs, assistants sociaux et cadres ASE méritent des outils concrets pour analyser sans biaiser et écrire sans blesser.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="fade-up">
+  <div class="container">
+    <h2 class="section-title">Parcours et engagements</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <p class="year">2024</p>
+        <h4>Comité des Parents ASE — Haut-Rhin</h4>
+        <p>Intégration du Comité des Parents de l'ASE du Haut-Rhin. Participation active aux travaux du comité, recueil de témoignages, analyse des pratiques. Restitution officielle devant les élus en mars 2025, en présence de plus de 30 professionnels.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="year">Janvier 2025</p>
+        <h4>Assises Alsaciennes de la Protection de l'Enfance — Strasbourg</h4>
+        <p>Intervenante officielle en tant que représentante du Comité des Parents ASE. Prise de parole devant un public de professionnels, élus et associations sur la place des parents dans le système de protection de l'enfance.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="year">2025</p>
+        <h4>Création de la méthode LENUX</h4>
+        <p>Conception d'une méthode opérationnelle, éthique et transmissible pour sécuriser les postures et les écrits professionnels en protection de l'enfance. Trois modules adaptés aux étudiants, professionnels confirmés et cadres de direction.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="year">Septembre 2025</p>
+        <h4>Observatoire de la Protection de l'Enfance d'Alsace</h4>
+        <p>Intervenante à la conférence stratégique de l'Observatoire. Présentation du regard croisé famille-institution et des apports de la méthode LENUX.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="year">Juin 2026</p>
+        <h4>Assises Nationales de la Protection de l'Enfance — Strasbourg</h4>
+        <p>Intervenante représentante du Comité des Parents ASE aux Assises Nationales. Portée nationale de son engagement.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="year">2026</p>
+        <h4>Publication du livre — La Meute est en Marche</h4>
+        <p>Manuscrit soumis à quatre maisons d'édition. Auto-édition Amazon en préparation en parallèle. Un récit brut, lucide et nécessaire.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERVENANTE -->
+<section class="bg-creme fade-up">
+  <div class="container">
+    <h2 class="section-title">Sur scène et dans les institutions</h2>
+    <p style="max-width:800px;color:var(--ardoise-mid);line-height:1.8;margin-bottom:20px;">Lena intervient régulièrement auprès des professionnels de la protection de l'enfance, dans les écoles de travail social et lors des événements institutionnels majeurs.</p>
+    <p style="max-width:800px;color:var(--ardoise-mid);line-height:1.8;margin-bottom:20px;">Parmi ses interventions : les Assises Alsaciennes de la Protection de l'Enfance (janvier 2025), l'Observatoire de la Protection de l'Enfance d'Alsace (septembre 2025), les Assises Nationales de la Protection de l'Enfance (juin 2026), ainsi que des interventions à l'ESEIS Strasbourg auprès des futurs travailleurs sociaux.</p>
+    <p style="max-width:800px;color:var(--ardoise-mid);line-height:1.8;">Son approche : ne jamais théoriser sans incarner. Chaque intervention mêle expertise terrain, outils concrets et témoignage vécu.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section fade-up">
+  <div class="container">
+    <h2>Travailler avec Lena</h2>
+    <a href="index.html#contact" class="btn btn-primary">Prendre contact</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Lena Roncari — La Meute est en Marche</p>
+    <p>Mentions légales · Politique de confidentialité</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){var o=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1});document.querySelectorAll('.fade-up').forEach(function(e){o.observe(e)})});
+</script>
+</body>
+</html>
