@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ Parents – Enfant confié ASE : vos droits, vos recours | La Meute</title>
+  <meta name="description" content="Votre enfant est confié à l'ASE ? Vos droits, les recours possibles, comment contester une mesure de confiance, comment récupérer votre enfant. Guide pratique par Lena Roncari." />
+  <meta name="keywords" content="enfant confié ASE que faire, récupérer mon enfant confié ASE, droits des parents enfant confié, contester décision ASE, mesure abusive, recours juge enfants, visite médiatisée ASE, aide parents enfant confié Mulhouse Strasbourg Alsace" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blanc: #fdfbf8;
+      --creme: #f5f0e8;
+      --creme-mid: #ede5d8;
+      --bordeaux: #7d2d3e;
+      --bordeaux-pale: #f2e4e7;
+      --prune: #4a1a28;
+      --terracotta: #c47855;
+      --terra-pale: #f7ece4;
+      --dore: #b8943a;
+      --dore-pale: #f5edda;
+      --sauge: #7a8c74;
+      --sauge-pale: #eaf0e8;
+      --ardoise: #2c2828;
+      --ardoise-mid: #5a4f4a;
+      --ardoise-light: #8a7f7a;
+      --border: #e2d8cc;
+      --shadow-soft: 0 4px 32px rgba(44,40,40,0.07);
+      --shadow-hover: 0 12px 48px rgba(44,40,40,0.13);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--blanc); color: var(--ardoise); font-size: 16px; line-height: 1.75; overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(253,251,248,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--ardoise); text-decoration: none; }
+    .nav-logo span { color: var(--bordeaux); font-style: italic; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ardoise-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--bordeaux); }
+    .nav-cta { background: var(--bordeaux) !important; color: #fff !important; padding: 10px 24px !important; border-radius: 40px !important; }
+    .nav-cta:hover { background: var(--prune) !important; }
+
+    /* URGENCE BANNER */
+    .urgence {
+      background: var(--bordeaux);
+      color: #fff;
+      text-align: center;
+      padding: 13px 24px;
+      font-size: 0.88rem;
+      font-weight: 400;
+      margin-top: 68px;
+    }
+    .urgence strong { font-weight: 600; }
+    .urgence a { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+    /* HERO */
+    .hero {
+      background: var(--creme);
+      padding: 70px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -100px;
+      width: 450px; height: 450px;
+      background: radial-gradient(ellipse, rgba(242,228,231,0.7) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 48px;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+    .hero-eyebrow-line { width: 28px; height: 1.5px; background: var(--bordeaux); }
+    .hero-eyebrow-text { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bordeaux); }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; color: var(--ardoise); margin-bottom: 20px; }
+    .hero h1 em { font-style: italic; color: var(--bordeaux); font-weight: 300; }
+    .hero-desc { font-size: 1rem; color: var(--ardoise-mid); font-weight: 300; line-height: 1.8; max-width: 580px; margin: 0 auto 36px; }
+    .hero-desc strong { color: var(--ardoise); font-weight: 500; }
+
+    /* MESSAGE DOUX */
+    .message-doux {
+      background: var(--bordeaux-pale);
+      border: 1px solid rgba(125,45,62,0.15);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 0 auto;
+      max-width: 680px;
+      text-align: left;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .message-doux-icone { font-size: 1.5rem; flex-shrink: 0; padding-top: 2px; }
+    .message-doux p { font-size: 0.92rem; color: var(--prune); font-weight: 300; line-height: 1.8; }
+    .message-doux p strong { font-weight: 600; }
+
+    /* CONTAINER */
+    .container { max-width: 820px; margin: 0 auto; padding: 0 48px; }
+
+    /* SECTION NAV RAPIDE */
+    .nav-rapide {
+      background: var(--blanc);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      position: sticky;
+      top: 68px;
+      z-index: 50;
+    }
+    .nav-rapide-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 48px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav-rapide a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--ardoise-mid);
+      text-decoration: none;
+      padding: 7px 16px;
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nav-rapide a:hover { background: var(--bordeaux); color: #fff; border-color: var(--bordeaux); }
+
+    /* SECTION TITRE */
+    .section-titre {
+      padding: 60px 0 32px;
+    }
+    .s-tag { display: inline-flex; align-items: center; gap: 10px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--bordeaux); margin-bottom: 12px; }
+    .s-tag::before { content: ''; width: 24px; height: 1px; background: var(--bordeaux); opacity: 0.4; }
+    .section-titre h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 600; color: var(--ardoise); line-height: 1.2; }
+    .section-titre h2 em { font-style: italic; color: var(--bordeaux); font-weight: 300; }
+    .section-titre p { margin-top: 10px; font-size: 0.9rem; color: var(--ardoise-mid); font-weight: 300; }
+
+    /* FAQ ITEMS */
+    .faq-liste { display: flex; flex-direction: column; gap: 10px; padding-bottom: 20px; }
+
+    .faq-item {
+      background: var(--blanc);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .faq-item:hover { box-shadow: var(--shadow-soft); }
+    .faq-item.open { border-color: var(--bordeaux); }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 28px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .faq-q-gauche { display: flex; align-items: flex-start; gap: 14px; }
+    .faq-num { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; font-weight: 700; color: var(--bordeaux); min-width: 24px; padding-top: 2px; }
+    .faq-q-texte { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--ardoise); line-height: 1.35; }
+    .faq-icone { width: 28px; height: 28px; border: 1.5px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.25s; }
+    .faq-icone svg { width: 14px; height: 14px; stroke: var(--ardoise-light); transition: transform 0.3s ease; }
+    .faq-item.open .faq-icone { background: var(--bordeaux); border-color: var(--bordeaux); }
+    .faq-item.open .faq-icone svg { stroke: #fff; transform: rotate(45deg); }
+
+    .faq-corps { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq-corps-inner {
+      padding: 0 28px 28px 66px;
+      font-size: 0.92rem;
+      color: var(--ardoise-mid);
+      font-weight: 300;
+      line-height: 1.85;
+    }
+    .faq-corps-inner p { margin-bottom: 14px; }
+    .faq-corps-inner p:last-child { margin-bottom: 0; }
+    .faq-corps-inner strong { color: var(--ardoise); font-weight: 500; }
+    .faq-corps-inner ul { padding-left: 20px; margin: 12px 0; }
+    .faq-corps-inner ul li { margin-bottom: 8px; }
+    .faq-corps-inner a { color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Encadré important */
+    .encadre {
+      background: var(--sauge-pale);
+      border-left: 3px solid var(--sauge);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.88rem;
+      color: var(--ardoise);
+    }
+    .encadre strong { color: var(--sauge); }
+    .encadre-attention {
+      background: var(--dore-pale);
+      border-left: 3px solid var(--dore);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.88rem;
+      color: var(--ardoise);
+    }
+    .encadre-attention strong { color: var(--dore); }
+
+    /* SEPARATEUR */
+    .sep { height: 1px; background: var(--border); margin: 20px 0; }
+
+    /* ENCART ÉMOTIONNEL */
+    .encart-emotion {
+      background: var(--bordeaux-pale);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 48px 0;
+      text-align: center;
+    }
+    .encart-emotion h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--prune); margin-bottom: 14px; }
+    .encart-emotion p { font-size: 0.92rem; color: var(--ardoise-mid); font-weight: 300; line-height: 1.8; max-width: 560px; margin: 0 auto 24px; }
+    .btn-bordeaux { display: inline-block; background: var(--bordeaux); color: #fff; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 30px; border-radius: 40px; text-decoration: none; transition: all 0.25s; }
+    .btn-bordeaux:hover { background: var(--prune); transform: translateY(-2px); }
+
+    /* NUMÉROS */
+    .numeros {
+      background: var(--ardoise);
+      color: #fff;
+      padding: 60px 0;
+    }
+    .numeros-titre { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600; text-align: center; margin-bottom: 8px; }
+    .numeros-sous { text-align: center; font-size: 0.88rem; color: rgba(255,255,255,0.5); font-weight: 300; margin-bottom: 40px; }
+    .numeros-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .num-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 28px 20px; text-align: center; transition: all 0.25s; }
+    .num-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); }
+    .num-chiffre { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 10px; }
+    .num-label { font-size: 0.82rem; color: rgba(255,255,255,0.6); font-weight: 300; line-height: 1.5; }
+
+    /* CTA LENA */
+    .cta-lena {
+      background: var(--creme);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .cta-lena h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 600; line-height: 1.2; margin-bottom: 16px; }
+    .cta-lena h2 em { font-style: italic; color: var(--bordeaux); font-weight: 300; }
+    .cta-lena p { font-size: 0.92rem; color: var(--ardoise-mid); font-weight: 300; max-width: 500px; margin: 0 auto 32px; line-height: 1.8; }
+    .cta-lena-note { font-size: 0.82rem; color: var(--ardoise-light); margin-top: 16px; font-style: italic; }
+
+    /* FOOTER */
+    footer { background: var(--prune); color: rgba(255,255,255,0.25); text-align: center; padding: 28px 48px; font-size: 0.78rem; line-height: 1.8; }
+    footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .container { padding: 0 20px; }
+      .nav-rapide-inner { padding: 0 20px; }
+      .hero-inner { padding: 0 20px; }
+      .faq-corps-inner { padding: 0 20px 24px; }
+      .numeros-grid { grid-template-columns: repeat(2, 1fr); }
+      .message-doux { flex-direction: column; gap: 12px; }
+    }
+  </style>
+
+  <!-- Schema.org FAQ pour le SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Quels sont mes droits en tant que parent dont l'enfant est confié à l'ASE ?", "acceptedAnswer": {"@type": "Answer", "text": "Même si votre enfant est confié à l'ASE, vous conservez l'autorité parentale sauf décision contraire du juge. Vous avez le droit d'être informé de la situation de votre enfant, de participer aux décisions importantes, et de maintenir un lien avec lui selon les modalités fixées."}},
+      {"@type": "Question", "name": "Comment contester une mesure ASE ASE ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous pouvez faire appel de la décision devant la Cour d'appel, saisir le juge des enfants pour une révision, ou demander la mainlevée de la mesure si la situation a changé. Il est fortement conseillé de vous faire accompagner par un avocat."}},
+      {"@type": "Question", "name": "Comment récupérer mon enfant confié par l'ASE ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous devez demander une audience au juge des enfants en prouvant que les conditions ayant motivé la mesure ont changé. Vous pouvez saisir le juge vous-même ou via un avocat. La levée de la mesure est possible à tout moment si l'intérêt de l'enfant le justifie."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">La <span>Meute</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#offres">Offres</a></li>
+    <li><a href="index.html#formation">Formation LENUX</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="faq-enfants.html">FAQ Enfants</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contacter Lena</a></li>
+  </ul>
+</nav>
+
+<!-- URGENCE -->
+<div class="urgence">
+  Situation d'urgence ? <strong>Appelez le 119</strong> (Allô Enfance en Danger) — <a href="tel:119">gratuit, 24h/24</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <div class="hero-eyebrow-text">Guide pour les parents</div>
+      <div class="hero-eyebrow-line"></div>
+    </div>
+    <h1>Votre enfant est confié à l'ASE.<br><em>Vous n'êtes pas seul·e.</em></h1>
+    <p class="hero-desc">
+      Le confier à l'ASE est l'une des épreuves les plus brutales qu'un parent puisse traverser. <strong>Vous avez des droits. Vous avez des recours.</strong> Cette page est là pour vous aider à comprendre et à agir.
+    </p>
+    <div class="message-doux">
+      <div class="message-doux-icone">💬</div>
+      <p>Cette page a été écrite par <strong>Lena Roncari</strong> — mère dont les enfants ont été confiés à l'ASE, représentante du Comité des Parents ASE du Haut-Rhin, et intervenante aux Assises de la Protection de l'Enfance. <strong>Elle sait ce que vous traversez.</strong> Ces informations ne remplacent pas un avis juridique professionnel, mais elles sont là pour vous orienter.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NAV RAPIDE -->
+<div class="nav-rapide">
+  <div class="nav-rapide-inner">
+    <a href="#comprendre">Comprendre la mesure ASE</a>
+    <a href="#droits">Vos droits</a>
+    <a href="#contester">Contester</a>
+    <a href="#recuperer">Récupérer votre enfant</a>
+    <a href="#contact-enfant">Voir votre enfant</a>
+    <a href="#avocat">Aide juridique</a>
+    <a href="#emotion">Vous n'êtes pas seul·e</a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <div class="container">
+
+    <!-- SECTION 1 : COMPRENDRE -->
+    <div class="section-titre" id="comprendre">
+      <div class="s-tag">Partie 1</div>
+      <h2>Comprendre <em>la mesure ASE</em></h2>
+      <p>Avant d'agir, il faut comprendre ce qui s'est passé et pourquoi.</p>
+    </div>
+
+    <div class="faq-liste">
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">01</span>
+            <span class="faq-q-texte" itemprop="name">Qui peut décider de confier mon enfant à l'ASE ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>Il existe deux types de mesures :</p>
+            <ul>
+              <li><strong>La mesure judiciaire</strong> : décidé par le juge des enfants, suite à un signalement ou une information préoccupante. C'est le cas le plus fréquent.</li>
+              <li><strong>La mesure administrative (ou contractuel)</strong> : proposé par l'ASE avec votre accord, sans décision de justice. Vous pouvez y mettre fin à tout moment en demandant le retour de votre enfant.</li>
+            </ul>
+            <div class="encadre"><strong>Important :</strong> si vous n'avez pas donné votre accord et qu'il n'y a pas eu d'audience chez le juge, la mesure peut être contestée. Consultez un avocat immédiatement.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">02</span>
+            <span class="faq-q-texte" itemprop="name">Combien de temps peut durer une mesure de protection ASE ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>Une mesure de protection judiciaire est toujours prononcée pour une durée déterminée, et <strong>réexaminé régulièrement</strong> par le juge des enfants. Il peut durer quelques mois comme plusieurs années.</p>
+            <p>La loi prévoit que le juge réexamine la situation au minimum tous les 2 ans pour les enfants de moins de 2 ans, et tous les 3 ans pour les autres.</p>
+            <div class="encadre-attention"><strong>À savoir :</strong> vous n'avez pas à attendre passivement. Vous pouvez à tout moment saisir le juge pour demander une révision si la situation a évolué de votre côté.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">03</span>
+            <span class="faq-q-texte" itemprop="name">Que contient un rapport ASE ? Puis-je le lire ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>Un rapport ASE (ou rapport éducatif) contient les observations des travailleurs sociaux sur votre situation familiale, les interactions avec votre enfant, votre coopération avec les services, et leurs recommandations au juge.</p>
+            <p><strong>Vous avez le droit de consulter les pièces du dossier</strong> transmises au juge — soit directement, soit via votre avocat.</p>
+            <div class="encadre"><strong>Conseil :</strong> si vous constatez des inexactitudes dans un rapport (dates erronées, propos mal retranscrits, faits sortis de leur contexte), signalez-le par écrit à votre avocat. Ces erreurs peuvent peser lourd dans les décisions.</div>
+            <p>C'est une réalité que Lena a vécue personnellement : des dates inversées, des propos déformés, des conclusions qui ne correspondaient pas à la réalité. <strong>Lire et vérifier les rapports est essentiel.</strong></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 2 : VOS DROITS -->
+    <div class="section-titre" id="droits">
+      <div class="s-tag">Partie 2</div>
+      <h2>Vos droits <em>en tant que parent</em></h2>
+      <p>La mesure ASE ne vous retire pas tous vos droits. Voici ce que vous pouvez exiger.</p>
+    </div>
+
+    <div class="faq-liste">
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">04</span>
+            <span class="faq-q-texte" itemprop="name">Est-ce que je garde l'autorité parentale si mon enfant est confié à l'ASE ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p><strong>Oui, dans la grande majorité des cas.</strong> La mesure ASE ne retire pas automatiquement l'autorité parentale. Vous restez le parent de votre enfant avec des droits et des devoirs.</p>
+            <p>L'autorité parentale ne peut être retirée que par une décision de justice spécifique, dans des situations très graves.</p>
+            <ul>
+              <li>Vous pouvez être consulté pour les décisions importantes (santé, scolarité…)</li>
+              <li>Vous pouvez maintenir un lien avec votre enfant selon les modalités fixées</li>
+              <li>Vous pouvez être informé de son état de santé et de son évolution scolaire</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">05</span>
+            <span class="faq-q-texte" itemprop="name">Combien de visites ai-je le droit d'avoir avec mon enfant confié ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>Les modalités de visite sont fixées par le juge des enfants dans la décision du juge. Il n'y a pas de nombre minimum légal imposé — cela dépend de chaque situation.</p>
+            <p>Les visites peuvent se dérouler :</p>
+            <ul>
+              <li><strong>Librement</strong> : vous voyez votre enfant sans surveillance</li>
+              <li><strong>En visite médiatisée</strong> : en présence d'un professionnel, dans un espace neutre</li>
+              <li><strong>Avec droit d'hébergement</strong> : votre enfant peut passer des nuits chez vous</li>
+            </ul>
+            <div class="encadre-attention"><strong>Si vous estimez que les visites sont insuffisantes</strong>, vous pouvez demander au juge des enfants d'augmenter leur fréquence ou de modifier leurs modalités.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">06</span>
+            <span class="faq-q-texte" itemprop="name">Comment se passe une visite médiatisée ? À quoi s'attendre ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>Une visite médiatisée se déroule dans un <strong>espace de rencontre neutre</strong>, en présence d'un professionnel (éducateur, travailleur social) qui observe les interactions.</p>
+            <p>Ces visites durent généralement 1h à 2h. Le professionnel n'est pas là pour vous juger, mais pour sécuriser la rencontre pour votre enfant.</p>
+            <div class="encadre"><strong>Conseil pratique :</strong> restez naturel·le. Parlez à votre enfant de choses simples et positives. Évitez de poser des questions sur sa famille d'accueil ou le foyer. Ce que vous dites et comment vous le dites sera peut-être noté dans un rapport.</div>
+            <p>Ces moments comptent énormément. Ils montrent au juge la qualité du lien que vous maintenez avec votre enfant.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 3 : CONTESTER -->
+    <div class="section-titre" id="contester">
+      <div class="s-tag">Partie 3</div>
+      <h2>Contester <em>une mesure de confiance ASE</em></h2>
+      <p>Vous pensez que la mesure est injuste ou disproportionnée ? Voici vos recours.</p>
+    </div>
+
+    <div class="faq-liste">
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">07</span>
+            <span class="faq-q-texte" itemprop="name">Comment contester une décision de l'ASE concernant mon enfant ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>Vous disposez de plusieurs voies de recours :</p>
+            <ul>
+              <li><strong>L'appel</strong> : vous pouvez faire appel de la décision du juge des enfants devant la Cour d'appel dans un délai de 15 jours.</li>
+              <li><strong>La requête en révision</strong> : vous pouvez saisir le juge à tout moment pour lui demander de réexaminer la situation si elle a changé.</li>
+              <li><strong>La mainlevée</strong> : si les raisons de la mesure n'existent plus, vous pouvez demander la levée pure et simple.</li>
+            </ul>
+            <div class="encadre-attention"><strong>Délai important :</strong> l'appel doit être formé dans les 15 jours suivant la notification de la décision. Ne laissez pas passer ce délai.</div>
+            <p>Dans tous les cas, <strong>faites-vous accompagner par un avocat</strong>. Ces procédures sont techniques et un professionnel vous évitera des erreurs qui pourraient vous nuire.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">08</span>
+            <span class="faq-q-texte" itemprop="name">Comment prouver que je suis un bon parent face à l'ASE ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>C'est l'une des questions les plus douloureuses à se poser. Avoir à prouver qu'on aime son enfant est une violence en soi.</p>
+            <p>Concrètement, ce que les services et le juge regardent :</p>
+            <ul>
+              <li>Votre régularité et votre investissement lors des visites</li>
+              <li>Votre capacité à écouter les besoins de votre enfant sans le mettre en tension</li>
+              <li>Vos démarches concrètes (logement stable, suivi médical, formation, emploi…)</li>
+              <li>Votre coopération avec les services — même quand c'est difficile</li>
+              <li>Les témoignages de l'entourage, de l'école, du médecin</li>
+            </ul>
+            <div class="encadre"><strong>Ce que dit Lena :</strong> "Coopérer ne veut pas dire tout accepter. Vous pouvez être en désaccord tout en restant respectueux. Et chaque désaccord doit être exprimé par écrit, daté, conservé."</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">09</span>
+            <span class="faq-q-texte" itemprop="name">Peut-on porter plainte contre l'ASE ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>Oui, c'est possible dans certaines situations. Vous pouvez :</p>
+            <ul>
+              <li>Signaler des manquements au <strong>Défenseur des droits</strong> (gratuit, indépendant)</li>
+              <li>Saisir le <strong>tribunal administratif</strong> si vous estimez que le Département a commis une faute</li>
+              <li>Porter plainte au pénal si un professionnel a commis une infraction</li>
+            </ul>
+            <div class="encadre-attention"><strong>Soyez stratégique :</strong> une plainte contre l'ASE pendant une procédure en cours peut parfois se retourner contre vous si elle est perçue comme une obstruction. Consultez un avocat avant d'agir.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 4 : RÉCUPÉRER -->
+    <div class="section-titre" id="recuperer">
+      <div class="s-tag">Partie 4</div>
+      <h2>Récupérer <em>votre enfant</em></h2>
+    </div>
+
+    <div class="faq-liste">
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">10</span>
+            <span class="faq-q-texte" itemprop="name">Comment récupérer mon enfant confié par l'ASE ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>Pour obtenir le retour de votre enfant, vous devez convaincre le juge que <strong>les conditions qui ont justifié la mesure ont changé</strong> de façon durable.</p>
+            <p>Les étapes concrètes :</p>
+            <ul>
+              <li>Saisir le juge des enfants par requête (seul ou via un avocat)</li>
+              <li>Apporter des preuves tangibles du changement de situation</li>
+              <li>Montrer que le retour est dans l'intérêt de votre enfant</li>
+            </ul>
+            <p>Le juge peut décider un retour progressif — d'abord des weekends, puis plus de temps, puis retour complet. <strong>C'est souvent le chemin le plus sûr et le plus durable.</strong></p>
+            <div class="encadre"><strong>Lena l'a vécu :</strong> en 2019, après des mois de travail et de coopération malgré tout ce qu'elle traversait, trois de ses enfants lui ont été rendus. Le juge avait reconnu noir sur blanc qu'elle offrait un cadre éducatif satisfaisant. C'est possible.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">11</span>
+            <span class="faq-q-texte" itemprop="name">Comment préparer une audience chez le juge des enfants ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>L'audience chez le juge des enfants est un moment crucial. Voici comment vous y préparer :</p>
+            <ul>
+              <li><strong>Avant</strong> : rassemblez tous vos justificatifs (logement, travail, suivi médical, courriers avec l'ASE). Préparez un résumé clair de votre situation actuelle et des changements depuis la prise en charge.</li>
+              <li><strong>Le jour J</strong> : venez à l'heure, habillez-vous sobrement. Restez calme même si vous êtes blessé·e. Le juge observe aussi votre comportement.</li>
+              <li><strong>Ce que vous dites</strong> : parlez de votre enfant, de ses besoins, de ce que vous pouvez lui offrir maintenant. Évitez d'attaquer les professionnels même si vous êtes en désaccord avec eux.</li>
+            </ul>
+            <div class="encadre-attention"><strong>Avec un avocat c'est bien mieux.</strong> Si vous n'en avez pas les moyens, vous avez droit à l'aide juridictionnelle. Renseignez-vous au tribunal ou auprès d'une association.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">12</span>
+            <span class="faq-q-texte" itemprop="name">Mon enfant ne veut plus me voir depuis sa prise en charge par l'ASE. Que faire ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>C'est une douleur immense. Et c'est plus fréquent qu'on ne le croit — le refus d'un enfant de voir son parent après la prise en charge par l'ASE est souvent une réaction de protection ou une conséquence du contexte institutionnel, pas un rejet définitif.</p>
+            <p>Que faire :</p>
+            <ul>
+              <li>Ne forcez pas. Un enfant qui se sent forcé se ferme davantage.</li>
+              <li>Maintenez une présence douce et régulière — une carte, une lettre, un message via l'éducateur référent.</li>
+              <li>Demandez qu'un travail soit fait avec un psychologue pour comprendre ce que vit votre enfant.</li>
+              <li>Signalez au juge que vous souhaitez maintenir le lien malgré les difficultés — c'est important pour votre dossier.</li>
+            </ul>
+            <div class="encadre"><strong>Tenez bon.</strong> Les enfants grandissent. Beaucoup reviennent vers leurs parents une fois adultes, quand ils ont pu comprendre et mettre des mots sur ce qu'ils ont vécu.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 5 : AIDE JURIDIQUE -->
+    <div class="section-titre" id="avocat">
+      <div class="s-tag">Partie 5</div>
+      <h2>Se faire <em>aider et accompagner</em></h2>
+    </div>
+
+    <div class="faq-liste">
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">13</span>
+            <span class="faq-q-texte" itemprop="name">Comment avoir un avocat gratuit pour mon dossier ASE ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>Si vos revenus sont modestes, vous avez droit à <strong>l'aide juridictionnelle</strong> — l'État paie tout ou partie des honoraires de votre avocat.</p>
+            <p>Comment faire :</p>
+            <ul>
+              <li>Rendez-vous au <strong>tribunal judiciaire</strong> de votre ville et demandez un formulaire de demande d'aide juridictionnelle</li>
+              <li>Vous pouvez aussi faire la demande en ligne sur <strong>justice.fr</strong></li>
+              <li>Une fois accordée, vous choisissez votre avocat parmi ceux qui acceptent l'aide juridictionnelle</li>
+            </ul>
+            <div class="encadre"><strong>En Alsace :</strong> contactez le barreau de Mulhouse (03 89 66 37 37) ou le barreau de Strasbourg (03 88 45 46 46) pour être orienté vers un avocat spécialisé en droit de la famille ou droit de l'enfance.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          <div class="faq-q-gauche">
+            <span class="faq-num">14</span>
+            <span class="faq-q-texte" itemprop="name">Quelles associations peuvent m'aider en tant que parent ?</span>
+          </div>
+          <div class="faq-icone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-corps" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-corps-inner" itemprop="text">
+            <p>Plusieurs associations peuvent vous accompagner, vous écouter ou vous orienter :</p>
+            <ul>
+              <li><strong>ATD Quart Monde</strong> — accompagnement des familles en grande difficulté</li>
+              <li><strong>La Voix de l'Enfant</strong> — défense des droits de l'enfant et soutien aux familles</li>
+              <li><strong>Le Défenseur des droits</strong> — gratuit, pour signaler des dysfonctionnements institutionnels (defenseursdesdroits.fr)</li>
+              <li><strong>Les CDAD</strong> (Conseils Départementaux d'Accès au Droit) — information juridique gratuite dans votre département</li>
+            </ul>
+            <div class="encadre"><strong>En Alsace :</strong> renseignez-vous auprès du Conseil Départemental du Haut-Rhin ou du Bas-Rhin pour connaître les structures locales d'accompagnement des familles concernées par l'ASE.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ENCART ÉMOTIONNEL -->
+    <div class="encart-emotion" id="emotion">
+      <h3>Vous souffrez de la situation que traverse votre enfant.</h3>
+      <p>Ce que vous ressentez — la culpabilité, la honte, la colère, l'impuissance — est légitime. <strong>Vous n'êtes pas un mauvais parent parce que votre enfant a été confié à l'ASE.</strong> Cette mesure n'est pas toujours la preuve d'une défaillance. C'est parfois la preuve que vous avez traversé des choses impossibles, sans filet.</p>
+      <p>Lena l'a vécu. Elle sait ce que c'est d'ouvrir la porte à des inconnus et de voir partir ses enfants. <strong>Si vous avez besoin de parler à quelqu'un qui comprend vraiment, contactez-la.</strong></p>
+      <a href="index.html#contact" class="btn-bordeaux">Écrire à Lena</a>
+    </div>
+
+  </div><!-- /container -->
+</main>
+
+<!-- NUMÉROS UTILES -->
+<section class="numeros">
+  <div class="container">
+    <div class="numeros-titre">Les numéros qui peuvent vous aider</div>
+    <div class="numeros-sous">Gratuits depuis n'importe quel téléphone</div>
+    <div class="numeros-grid">
+      <div class="num-card">
+        <div class="num-chiffre">119</div>
+        <div class="num-label">Allô Enfance en Danger<br>Écoute & signalement<br>24h/24</div>
+      </div>
+      <div class="num-card">
+        <div class="num-chiffre">3919</div>
+        <div class="num-label">Violences Femmes Info<br>Si vous êtes en danger<br>7j/7</div>
+      </div>
+      <div class="num-card">
+        <div class="num-chiffre">3114</div>
+        <div class="num-label">Prévention du suicide<br>Si vous êtes en détresse<br>24h/24</div>
+      </div>
+      <div class="num-card">
+        <div class="num-chiffre">17</div>
+        <div class="num-label">Police / Gendarmerie<br>Danger immédiat</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA LENA -->
+<section class="cta-lena">
+  <div class="container">
+    <div class="s-tag">Vous n'êtes pas seul·e</div>
+    <h2>Une question ?<br><em>Contactez Lena.</em></h2>
+    <p>Lena Roncari répond personnellement aux parents qui traversent une situation difficile avec l'ASE. Pas de jugement. Une écoute qui vient de l'intérieur.</p>
+    <a href="index.html#contact" class="btn-bordeaux">Envoyer un message</a>
+    <div class="cta-lena-note">Cette page est fournie à titre informatif. Elle ne remplace pas un avis juridique professionnel.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Lena Roncari — <em>La Meute est en Marche</em></p>
+  <p style="margin-top:6px;"><a href="#">Mentions légales</a> · <a href="index.html">Retour à l'accueil</a></p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => toggle(btn));
+    btn.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(btn); }
+    });
+  });
+
+  function toggle(btn) {
+    const item = btn.closest('.faq-item');
+    const corps = item.querySelector('.faq-corps');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.faq-corps').style.maxHeight = '0';
+      el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      corps.style.maxHeight = corps.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+</script>
+</body>
+</html>
