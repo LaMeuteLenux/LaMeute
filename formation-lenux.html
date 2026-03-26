@@ -192,7 +192,7 @@
     footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
 
     /* ANIMATIONS */
-    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+    .fade-up { opacity: 1; transform: none; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
     /* MOBILE */
@@ -610,10 +610,10 @@
       <h2>Vous souhaitez organiser<br><em>une formation LENUX ?</em></h2>
       <p>Réponse sous 48h. Devis gratuit et sans engagement. La formation peut être organisée directement dans votre structure, en Alsace ou à distance.</p>
       <div class="cta-btns">
-        <a href="mailto:roncarilena@gmail.com" class="btn-main">Demander un devis par email</a>
+        <a href="/cdn-cgi/l/email-protection#f78598999496859e9b929996b7909a969e9bd994989a" class="btn-main">Demander un devis par email</a>
         <a href="tel:0611347177" class="btn-ghost">06 11 34 71 77</a>
       </div>
-      <div class="cta-note">roncarilena@gmail.com · Alsace / Grand Est · Distanciel possible</div>
+      <div class="cta-note"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f5879a9b9694879c99909b94b59298949c99db969a98">[email&#160;protected]</a> · Alsace / Grand Est · Distanciel possible</div>
     </div>
   </div>
 </section>
@@ -624,11 +624,4 @@
   <p style="margin-top:6px;"><a href="index.html">Accueil</a> · <a href="apropos.html">À propos</a> · <a href="#">Mentions légales</a></p>
 </footer>
 
-<script>
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-</script>
-</body>
-</html>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></scrip
