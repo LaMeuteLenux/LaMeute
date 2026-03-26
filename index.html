@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Meute est en Marche – Lena Roncari | Livre · Formation LENUX · Interventions ASE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blanc: #fdfbf8;
+  --creme: #f5f0e8;
+  --creme-mid: #ede5d8;
+  --bordeaux: #7d2d3e;
+  --bordeaux-light: #a84059;
+  --bordeaux-pale: #f2e4e7;
+  --prune: #4a1a28;
+  --terracotta: #c47855;
+  --dore: #b8943a;
+  --dore-pale: #f5edda;
+  --sauge: #7a8c74;
+  --ardoise: #2c2828;
+  --ardoise-mid: #5a4f4a;
+  --ardoise-light: #8a7f7a;
+  --border: #e2d8cc;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; color: var(--ardoise); background: var(--blanc); font-weight: 400; line-height: 1.7; font-size: 16px; }
+h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.2; }
+a { color: var(--bordeaux); text-decoration: none; }
+img { max-width: 100%; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+nav { position: sticky; top: 0; background: rgba(253,251,248,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 100; padding: 0 24px; }
+nav .nav-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+nav .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ardoise); }
+nav .logo em { color: var(--bordeaux); font-style: italic; }
+nav .nav-links { display: flex; align-items: center; gap: 28px; }
+nav .nav-links a { font-size: 0.9rem; color: var(--ardoise-mid); font-weight: 400; transition: color .2s; }
+nav .nav-links a:hover { color: var(--bordeaux); }
+nav .nav-cta { background: var(--bordeaux); color: #fff !important; padding: 8px 20px; border-radius: 6px; font-weight: 500; font-size: 0.85rem; transition: background .2s; }
+nav .nav-cta:hover { background: var(--bordeaux-light); }
+.menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--ardoise); }
+
+/* HERO */
+.hero { min-height: calc(100vh - 64px); display: flex; align-items: center; padding: 80px 0; }
+.hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.eyebrow { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--ardoise-light); font-weight: 500; margin-bottom: 16px; }
+.hero h1 { font-size: 3.2rem; margin-bottom: 16px; }
+.hero h1 em { color: var(--bordeaux); font-style: italic; }
+.hero .subtitle { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--ardoise-mid); font-style: italic; margin-bottom: 20px; }
+.hero .intro { color: var(--ardoise-mid); font-size: 1rem; line-height: 1.8; margin-bottom: 32px; }
+.btn { display: inline-block; padding: 14px 32px; border-radius: 6px; font-weight: 500; font-size: 0.95rem; transition: all .2s; cursor: pointer; border: none; }
+.btn-primary { background: var(--bordeaux); color: #fff; }
+.btn-primary:hover { background: var(--bordeaux-light); }
+.btn-ghost { background: none; color: var(--bordeaux); padding: 14px 16px; }
+.btn-ghost:hover { color: var(--bordeaux-light); }
+.hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+/* BOOK CARD */
+.book-card { background: linear-gradient(135deg, var(--bordeaux), var(--prune)); color: #fff; border-radius: 16px; padding: 40px; position: relative; overflow: hidden; }
+.book-card .tag { display: inline-block; background: rgba(255,255,255,0.15); padding: 4px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 500; margin-bottom: 20px; }
+.book-card h3 { font-size: 1.8rem; margin-bottom: 8px; }
+.book-card .author { font-size: 0.95rem; opacity: 0.8; margin-bottom: 20px; }
+.book-card blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; line-height: 1.6; border-left: 2px solid rgba(255,255,255,0.3); padding-left: 16px; margin-bottom: 24px; }
+.book-card .btn-book { display: inline-block; background: rgba(255,255,255,0.15); color: #fff; padding: 10px 24px; border-radius: 6px; font-weight: 500; font-size: 0.9rem; transition: background .2s; }
+.book-card .btn-book:hover { background: rgba(255,255,255,0.25); }
+.book-card .badge { position: absolute; top: 20px; right: 20px; background: var(--dore); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+
+/* CREDIBILITY */
+.credibility { background: var(--creme); padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.credibility .container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; }
+.credibility span { font-size: 0.85rem; color: var(--ardoise-mid); font-weight: 400; letter-spacing: 0.5px; }
+
+/* SECTIONS */
+section { padding: 100px 0; }
+section.bg-creme { background: var(--creme); }
+section.bg-bordeaux-pale { background: var(--bordeaux-pale); }
+section.bg-dore-pale { background: var(--dore-pale); }
+.section-tag { display: inline-block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2px; color: var(--bordeaux); font-weight: 500; margin-bottom: 12px; }
+.section-title { font-size: 2.4rem; margin-bottom: 48px; }
+
+/* CARDS GRID */
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.card { background: var(--blanc); border: 1px solid var(--border); border-radius: 12px; padding: 36px 28px; transition: transform .2s, box-shadow .2s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
+.card.featured { background: var(--bordeaux); color: #fff; border-color: var(--bordeaux); }
+.card.featured .card-link { color: #fff; }
+.card .card-icon { font-size: 2rem; margin-bottom: 16px; }
+.card h3 { font-size: 1.4rem; margin-bottom: 8px; }
+.card .card-subtitle { font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; color: var(--bordeaux); }
+.card.featured .card-subtitle { color: rgba(255,255,255,0.7); }
+.card p { font-size: 0.95rem; line-height: 1.7; color: var(--ardoise-mid); margin-bottom: 20px; }
+.card.featured p { color: rgba(255,255,255,0.85); }
+.card .card-price { font-size: 0.85rem; color: var(--ardoise-light); margin-bottom: 16px; }
+.card.featured .card-price { color: rgba(255,255,255,0.6); }
+.card-link { font-weight: 500; font-size: 0.9rem; color: var(--bordeaux); }
+.card-link:hover { color: var(--bordeaux-light); }
+
+/* ABOUT SECTION */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.about-text p { color: var(--ardoise-mid); margin-bottom: 20px; line-height: 1.8; }
+
+/* TIMELINE */
+.timeline { position: relative; padding-left: 28px; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--border); }
+.timeline-item { position: relative; margin-bottom: 32px; padding-left: 20px; }
+.timeline-item::before { content: ''; position: absolute; left: -34px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--bordeaux); border: 2px solid var(--blanc); }
+.timeline-item .year { font-weight: 600; font-size: 0.85rem; color: var(--bordeaux); margin-bottom: 4px; }
+.timeline-item h4 { font-size: 1.1rem; margin-bottom: 4px; }
+.timeline-item p { font-size: 0.9rem; color: var(--ardoise-light); }
+
+/* QUOTE */
+.quote-section { padding: 80px 0; text-align: center; }
+.quote-section blockquote { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic; max-width: 800px; margin: 0 auto 20px; line-height: 1.6; color: var(--ardoise); }
+.quote-section .quote-author { font-size: 0.9rem; color: var(--ardoise-mid); }
+
+/* RESOURCES */
+.cards-grid-2x2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.resource-card { background: var(--blanc); border: 1px solid var(--border); border-radius: 12px; padding: 36px 28px; transition: transform .2s, box-shadow .2s; }
+.resource-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
+.resource-card .card-icon { font-size: 2rem; margin-bottom: 16px; }
+.resource-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+.resource-card p { font-size: 0.95rem; color: var(--ardoise-mid); margin-bottom: 16px; line-height: 1.7; }
+.resource-card .tag-soon { display: inline-block; background: var(--dore-pale); color: var(--dore); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-bottom: 12px; }
+
+/* CONTACT */
+.contact-section { background: linear-gradient(135deg, var(--bordeaux), var(--prune)); color: #fff; padding: 100px 0; text-align: center; }
+.contact-section h2 { color: #fff; font-size: 2.4rem; margin-bottom: 20px; }
+.contact-section p { color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 40px; }
+.contact-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+.btn-white { background: #fff; color: var(--bordeaux); padding: 14px 32px; border-radius: 6px; font-weight: 500; }
+.btn-white:hover { background: var(--creme); color: var(--bordeaux); }
+.btn-outline-white { background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 14px 32px; border-radius: 6px; font-weight: 500; }
+.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+.contact-info { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+/* FOOTER */
+footer { background: var(--prune); color: rgba(255,255,255,0.6); padding: 40px 0; text-align: center; font-size: 0.85rem; }
+footer p { margin-bottom: 8px; }
+footer a { color: rgba(255,255,255,0.6); }
+footer a:hover { color: #fff; }
+
+/* FADE UP */
+.fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  nav .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--blanc); flex-direction: column; padding: 20px; border-bottom: 1px solid var(--border); gap: 16px; }
+  nav .nav-links.open { display: flex; }
+  .hero .container { grid-template-columns: 1fr; gap: 40px; }
+  .hero h1 { font-size: 2.2rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .cards-grid-2x2 { grid-template-columns: 1fr; }
+  .credibility .container { flex-direction: column; gap: 12px; text-align: center; }
+  .section-title { font-size: 1.8rem; }
+  .contact-info { flex-direction: column; align-items: center; gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">La <em>Meute</em></a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="index.html#offres">Offres</a>
+      <a href="apropos.html">À propos</a>
+      <a href="formation-lenux.html">Formation LENUX</a>
+      <a href="faq-enfants.html">FAQ Enfants</a>
+      <a href="faq-parents.html">FAQ Parents</a>
+      <a href="index.html#contact" class="nav-cta">Contacter Lena</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="fade-up">
+      <p class="eyebrow">Autrice · Formatrice · Experte ASE</p>
+      <h1>La Meute<br>est en Marche<br><em>Lena Roncari</em></h1>
+      <p class="subtitle">Née à l'envers — debout depuis toujours</p>
+      <p class="intro">Une voix de l'intérieur. Mère, survivante, intervenante aux Assises de la Protection de l'Enfance — je traduis ce que les dossiers ne savent pas écrire, pour les familles, pour les professionnels, pour les enfants oubliés.</p>
+      <div class="hero-actions">
+        <a href="#offres" class="btn btn-primary">Découvrir mes offres</a>
+        <a href="apropos.html" class="btn btn-ghost">Mon parcours ↓</a>
+      </div>
+    </div>
+    <div class="fade-up">
+      <div class="book-card">
+        <span class="badge">✦ En cours d'édition</span>
+        <span class="tag">Disponible bientôt</span>
+        <h3>La Meute est en Marche</h3>
+        <p class="author">Lena Roncari</p>
+        <blockquote>« Ce livre n'est pas né d'un projet littéraire, il est né d'un combat. »</blockquote>
+        <a href="#contact" class="btn-book">Me prévenir à la sortie →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDIBILITY -->
+<div class="credibility">
+  <div class="container">
+    <span>Assises Alsaciennes de la Protection de l'Enfance 2025</span>
+    <span>•</span>
+    <span>Comité des Parents ASE — Haut-Rhin</span>
+    <span>•</span>
+    <span>Intervenante ESEIS Strasbourg</span>
+    <span>•</span>
+    <span>Assises Nationales Protection de l'Enfance — Juin 2026</span>
+  </div>
+</div>
+
+<!-- OFFRES -->
+<section id="offres" class="fade-up">
+  <div class="container">
+    <p class="section-tag">Ce que je propose</p>
+    <h2 class="section-title">Trois façons de travailler ensemble</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">📖</div>
+        <p class="card-subtitle">Livre / Ebook</p>
+        <h3>La Meute est en Marche</h3>
+        <p>Récit vrai, brut et lucide. Dix-sept ans de violence conjugale, des enfants confiés, des silences institutionnels.</p>
+        <p class="card-price">Bientôt disponible · Amazon + ebook</p>
+        <a href="#contact" class="card-link">Être notifiée à la sortie →</a>
+      </div>
+      <div class="card featured">
+        <div class="card-icon">🎓</div>
+        <p class="card-subtitle">Formation</p>
+        <h3>Méthode LENUX</h3>
+        <p>Formation opérationnelle pour sécuriser postures et écrits professionnels en protection de l'enfance. 3 modules.</p>
+        <p class="card-price">450 € → 8 000 € HT / selon module</p>
+        <a href="formation-lenux.html" class="card-link">Voir les modules →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎤</div>
+        <p class="card-subtitle">Conférences / Interventions</p>
+        <h3>Faire intervenir Lena</h3>
+        <p>Établissements, écoles de travail social, ASE. Thèmes : relation famille-institution, violence institutionnelle, parentalité sous pression.</p>
+        <p class="card-price">Sur devis / selon durée et déplacement</p>
+        <a href="index.html#contact" class="card-link">Demander un devis →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section id="apropos" class="bg-creme fade-up">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-tag">Qui suis-je</p>
+        <h2 class="section-title">Une femme qui parle de l'intérieur</h2>
+        <p>Je ne suis pas venue à la protection de l'enfance par les études. J'y suis venue par la vie — dix-sept ans de violence conjugale, des enfants confiés à l'ASE, des rapports éducatifs, des audiences chez le juge.</p>
+        <p>Aujourd'hui je suis autrice, formatrice et experte en protection de l'enfance. J'ai travaillé auprès de mineurs non accompagnés, je représente le Comité des Parents ASE du Haut-Rhin, et j'ai été invitée aux Assises Alsaciennes de la Protection de l'Enfance comme intervenante officielle.</p>
+        <p>Ce double regard — famille et institution — est ma valeur ajoutée. Je traduis ce que les familles ne savent pas dire et ce que les professionnels n'osent pas entendre.</p>
+        <a href="#contact" class="btn btn-primary" style="margin-top: 12px;">Prendre contact</a>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <p class="year">2024</p>
+          <h4>Comité des Parents ASE — Haut-Rhin</h4>
+          <p>Intégration du Comité. Restitution devant les élus en mars 2025 avec plus de 30 professionnels.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="year">Jan. 2025</p>
+          <h4>Assises Alsaciennes — Strasbourg</h4>
+          <p>Intervenante officielle en tant que représentante du Comité des Parents ASE.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="year">2025</p>
+          <h4>Création de la méthode LENUX</h4>
+          <p>Méthode opérationnelle pour sécuriser postures et écrits professionnels.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="year">Sept. 2025</p>
+          <h4>Observatoire de la Protection de l'Enfance d'Alsace</h4>
+          <p>Intervenante à la conférence stratégique.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="year">Juin 2026</p>
+          <h4>Assises Nationales — Strasbourg</h4>
+          <p>Intervenante représentante du Comité des Parents ASE.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="year">2026</p>
+          <h4>Publication du livre</h4>
+          <p>La Meute est en Marche — soumis à 4 maisons d'édition.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CITATION 1 -->
+<section class="quote-section bg-bordeaux-pale fade-up">
+  <div class="container">
+    <blockquote>« On ne répare pas un enfant en brisant ses parents. La protection de l'enfance doit être réhumanisée. »</blockquote>
+    <p class="quote-author">— Lena Roncari — Restitution au Comité des Parents ASE, mars 2025</p>
+  </div>
+</section>
+
+<!-- CITATION 2 -->
+<section class="quote-section bg-dore-pale fade-up">
+  <div class="container">
+    <blockquote>« Il faut tout un village pour élever un enfant. »</blockquote>
+    <p class="quote-author">— Proverbe africain — fil conducteur de La Meute</p>
+  </div>
+</section>
+
+<!-- RESSOURCES -->
+<section id="ressources" class="bg-creme fade-up">
+  <div class="container">
+    <h2 class="section-title">Pour les familles et les professionnels</h2>
+    <div class="cards-grid-2x2">
+      <div class="resource-card">
+        <div class="card-icon">👶</div>
+        <h3>FAQ pour les enfants et jeunes confiés à l'ASE</h3>
+        <p>Vos droits, comment demander de l'aide, numéros d'urgence.</p>
+        <a href="faq-enfants.html" class="card-link">Lire la FAQ →</a>
+      </div>
+      <div class="resource-card">
+        <div class="card-icon">👨‍👩‍👧</div>
+        <h3>FAQ pour les parents</h3>
+        <p>Droits des parents, recours, comment contester une mesure ASE, comment récupérer son enfant.</p>
+        <a href="faq-parents.html" class="card-link">Lire la FAQ →</a>
+      </div>
+      <div class="resource-card">
+        <div class="card-icon">🏠</div>
+        <span class="tag-soon">Bientôt disponible</span>
+        <h3>Guide familles d'accueil</h3>
+        <p>Devenir famille d'accueil, conditions, agrément, droits, indemnisation.</p>
+      </div>
+      <div class="resource-card">
+        <div class="card-icon">📋</div>
+        <span class="tag-soon">Bientôt disponible</span>
+        <h3>Guide pour les professionnels</h3>
+        <p>Procédures ASE, rédaction d'écrits professionnels, gestion des situations complexes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section fade-up">
+  <div class="container">
+    <h2>Vous avez un projet ? Je vous réponds.</h2>
+    <p>Intervention dans votre structure, formation LENUX, conférence ou demande d'information — je réponds à chaque message personnellement.</p>
+    <div class="contact-actions">
+      <a href="mailto:contact@lena-roncari.fr" class="btn-white">Envoyer un email</a>
+      <a href="tel:0611347177" class="btn-outline-white">06 11 34 71 77</a>
+    </div>
+    <div class="contact-info">
+      <span>contact@lena-roncari.fr</span>
+      <span>06 11 34 71 77</span>
+      <span>Alsace / Grand Est</span>
+      <span>Distanciel possible</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Lena Roncari — La Meute est en Marche</p>
+    <p>Mentions légales · Politique de confidentialité</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+});
+</script>
+</body>
+</html>

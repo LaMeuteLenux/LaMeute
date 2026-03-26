@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Meute est en Marche – Le livre de Lena Roncari | Précommande</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blanc:#fdfbf8;--creme:#f5f0e8;--creme-mid:#ede5d8;--bordeaux:#7d2d3e;--bordeaux-light:#a84059;--bordeaux-pale:#f2e4e7;--prune:#4a1a28;--terracotta:#c47855;--dore:#b8943a;--dore-pale:#f5edda;--sauge:#7a8c74;--ardoise:#2c2828;--ardoise-mid:#5a4f4a;--ardoise-light:#8a7f7a;--border:#e2d8cc}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;color:var(--ardoise);background:var(--blanc);font-weight:400;line-height:1.7;font-size:16px}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.2}
+a{color:var(--bordeaux);text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(253,251,248,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:100;padding:0 24px}
+nav .nav-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+nav .logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--ardoise)}
+nav .logo em{color:var(--bordeaux);font-style:italic}
+nav .nav-links{display:flex;align-items:center;gap:28px}
+nav .nav-links a{font-size:0.9rem;color:var(--ardoise-mid);font-weight:400;transition:color .2s}
+nav .nav-links a:hover{color:var(--bordeaux)}
+nav .nav-cta{background:var(--bordeaux);color:#fff!important;padding:8px 20px;border-radius:6px;font-weight:500;font-size:0.85rem;transition:background .2s}
+nav .nav-cta:hover{background:var(--bordeaux-light)}
+.menu-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--ardoise)}
+section{padding:100px 0}
+section.bg-creme{background:var(--creme)}
+.section-tag{display:inline-block;font-size:0.78rem;text-transform:uppercase;letter-spacing:2px;color:var(--bordeaux);font-weight:500;margin-bottom:12px}
+.section-title{font-size:2.4rem;margin-bottom:48px}
+.btn{display:inline-block;padding:14px 32px;border-radius:6px;font-weight:500;font-size:0.95rem;transition:all .2s;cursor:pointer;border:none}
+.btn-primary{background:var(--bordeaux);color:#fff}
+.btn-primary:hover{background:var(--bordeaux-light)}
+footer{background:var(--prune);color:rgba(255,255,255,0.6);padding:40px 0;text-align:center;font-size:0.85rem}
+footer p{margin-bottom:8px}
+footer a{color:rgba(255,255,255,0.6)}
+footer a:hover{color:#fff}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* HERO LIVRE */
+.hero-livre{background:linear-gradient(135deg,var(--prune),var(--bordeaux));color:#fff;padding:120px 0;text-align:center}
+.hero-livre h1{font-size:3.5rem;margin-bottom:12px}
+.hero-livre h2{font-family:'Jost',sans-serif;font-weight:400;font-size:1.2rem;opacity:0.8;margin-bottom:24px}
+.hero-livre .tag{display:inline-block;background:rgba(255,255,255,0.15);padding:8px 20px;border-radius:20px;font-size:0.85rem}
+
+/* BOOK VISUAL */
+.book-visual{width:220px;height:320px;background:linear-gradient(135deg,var(--bordeaux),var(--prune));border-radius:8px;margin:40px auto 0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.book-visual h3{font-size:1.4rem;margin-bottom:8px;color:#fff}
+.book-visual p{font-size:0.85rem;color:rgba(255,255,255,0.7)}
+
+/* EXTRAITS */
+.extrait{margin-bottom:48px;max-width:800px}
+.extrait h3{font-size:1.1rem;color:var(--bordeaux);margin-bottom:12px;font-weight:600}
+.extrait p{color:var(--ardoise-mid);line-height:1.9;font-size:1.05rem}
+.extrait blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;line-height:1.8;color:var(--ardoise);border-left:3px solid var(--bordeaux);padding-left:20px}
+
+/* CARDS */
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.audience-card{background:var(--blanc);border:1px solid var(--border);border-radius:12px;padding:36px 28px;text-align:center;transition:transform .2s,box-shadow .2s}
+.audience-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.06)}
+.audience-card .icon{font-size:2.5rem;margin-bottom:16px}
+.audience-card h3{font-size:1.3rem;margin-bottom:12px}
+.audience-card p{color:var(--ardoise-mid);font-size:0.95rem;line-height:1.7}
+
+/* FORMAT CARDS */
+.format-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:700px;margin:0 auto}
+.format-card{background:var(--blanc);border:1px solid var(--border);border-radius:12px;padding:40px 28px;text-align:center;transition:transform .2s,box-shadow .2s}
+.format-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.06)}
+.format-card .icon{font-size:2.5rem;margin-bottom:16px}
+.format-card h3{font-size:1.3rem;margin-bottom:8px}
+.format-card p{color:var(--ardoise-mid);font-size:0.9rem}
+
+/* PREINSCRIPTION */
+.preinscription{background:var(--creme);padding:100px 0;text-align:center}
+.preinscription h2{font-size:2rem;margin-bottom:16px}
+.preinscription .desc{color:var(--ardoise-mid);max-width:600px;margin:0 auto 40px;line-height:1.8}
+.form-inline{display:flex;gap:12px;max-width:500px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.form-inline input{padding:14px 20px;border:1px solid var(--border);border-radius:6px;font-family:'Jost',sans-serif;font-size:0.95rem;flex:1;min-width:180px;background:var(--blanc)}
+.form-inline input:focus{outline:none;border-color:var(--bordeaux)}
+.form-inline button{padding:14px 28px;background:var(--bordeaux);color:#fff;border:none;border-radius:6px;font-family:'Jost',sans-serif;font-weight:500;font-size:0.95rem;cursor:pointer;transition:background .2s}
+.form-inline button:hover{background:var(--bordeaux-light)}
+
+/* KDP */
+.kdp-section p{color:var(--ardoise-mid);max-width:800px;line-height:1.8;margin-bottom:16px}
+
+/* CTA */
+.cta-section{background:var(--creme);padding:80px 0;text-align:center}
+.cta-section h2{font-size:2rem;margin-bottom:24px}
+
+@media(max-width:768px){
+  .menu-toggle{display:block}
+  nav .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--blanc);flex-direction:column;padding:20px;border-bottom:1px solid var(--border);gap:16px}
+  nav .nav-links.open{display:flex}
+  .hero-livre h1{font-size:2.2rem}
+  .cards-3{grid-template-columns:1fr}
+  .format-grid{grid-template-columns:1fr}
+  .section-title{font-size:1.8rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">La <em>Meute</em></a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="index.html#offres">Offres</a>
+      <a href="apropos.html">À propos</a>
+      <a href="formation-lenux.html">Formation LENUX</a>
+      <a href="faq-enfants.html">FAQ Enfants</a>
+      <a href="faq-parents.html">FAQ Parents</a>
+      <a href="index.html#contact" class="nav-cta">Contacter Lena</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-livre fade-up">
+  <div class="container">
+    <h1>La Meute est en Marche</h1>
+    <h2>Lena Roncari</h2>
+    <span class="tag">En cours d'édition · Bientôt disponible</span>
+    <div class="book-visual">
+      <h3>La Meute<br>est en Marche</h3>
+      <p>Lena Roncari</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRAITS -->
+<section class="fade-up">
+  <div class="container">
+    <h2 class="section-title">Un combat. Pas un témoignage de plus.</h2>
+
+    <div class="extrait">
+      <h3>Avant-propos</h3>
+      <blockquote>Dix-sept années de violence conjugale, des procédures administratives interminables, des décisions prises loin des corps et des vies qu'elles impactent. Des enfants confiés, des expertises, des silences institutionnels et, au milieu de tout cela, une mère qui refuse de s'effondrer.</blockquote>
+    </div>
+
+    <div class="extrait">
+      <h3>Chapitre 10</h3>
+      <blockquote>J'ai compris que le système ne manque pas toujours de moyens, il manque surtout de courage. Il ne décide pas toujours mal par ignorance, mais par peur. Peur d'être mis en cause, peur de sortir du cadre, peur de penser par soi-même.</blockquote>
+    </div>
+
+    <div class="extrait">
+      <h3>Épilogue</h3>
+      <blockquote>La meute n'est pas une armée. Ce n'est pas un slogan, ce n'est pas une revanche. La meute, c'est ce qui se forme quand des êtres humains refusent de laisser tomber les leurs.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- À QUI S'ADRESSE CE LIVRE -->
+<section class="bg-creme fade-up">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center">À qui s'adresse ce livre</h2>
+    <div class="cards-3">
+      <div class="audience-card">
+        <div class="icon">👨‍👩‍👧</div>
+        <h3>Les familles</h3>
+        <p>Pour ceux qui ont vécu le système de l'intérieur et cherchent à mettre des mots sur leur expérience.</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon">👩‍💼</div>
+        <h3>Les professionnels</h3>
+        <p>Pour les éducateurs, assistants sociaux, cadres ASE qui veulent comprendre ce que vivent vraiment les familles.</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon">💪</div>
+        <h3>Toutes les femmes qui ont tenu</h3>
+        <p>Pour celles qui ont résisté, qui ont tenu debout quand tout les invitait à s'effondrer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMAT -->
+<section class="fade-up">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center">Choisissez votre format</h2>
+    <div class="format-grid">
+      <div class="format-card">
+        <div class="icon">📱</div>
+        <h3>Ebook Kindle</h3>
+        <p>Disponible sur Amazon</p>
+      </div>
+      <div class="format-card">
+        <div class="icon">📖</div>
+        <h3>Livre broché</h3>
+        <p>Disponible sur Amazon</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREINSCRIPTION -->
+<section class="preinscription fade-up">
+  <div class="container">
+    <h2>Soyez parmi les premiers lecteurs.</h2>
+    <p class="desc">Le livre sera soumis à 4 maisons d'édition. En parallèle, une auto-édition Amazon est en préparation. Laissez votre email pour être prévenu·e à la sortie.</p>
+    <form class="form-inline" onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;color:var(--bordeaux);font-weight:500;padding:14px&quot;>Merci ! Vous serez prévenu·e à la sortie du livre.</p>'">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <button type="submit">Me prévenir à la sortie</button>
+    </form>
+  </div>
+</section>
+
+<!-- COMMENT LE LIVRE ARRIVE SUR AMAZON -->
+<section class="fade-up">
+  <div class="container kdp-section">
+    <h2 class="section-title">Comment le livre arrive-t-il sur Amazon ?</h2>
+    <p>Le livre est en cours d'édition et sera publié via Amazon KDP (Kindle Direct Publishing), la plateforme d'auto-édition d'Amazon. Ce processus permet aux auteurs de garder le contrôle total sur leur œuvre — du contenu à la couverture, en passant par le prix et la distribution.</p>
+    <p>Amazon KDP permet de publier simultanément en format ebook (Kindle) et en livre broché (paperback), avec une distribution mondiale. Le livre sera disponible sur toutes les places Amazon (France, Belgique, Suisse, Canada, etc.).</p>
+    <p>En parallèle, le manuscrit est soumis à quatre maisons d'édition françaises. Si l'une d'elles accepte le projet, la distribution pourra être élargie aux librairies physiques.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section fade-up">
+  <div class="container">
+    <h2>Contacter Lena</h2>
+    <a href="index.html#contact" class="btn btn-primary">Prendre contact</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Lena Roncari — La Meute est en Marche</p>
+    <p>Mentions légales · Politique de confidentialité</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){var o=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1});document.querySelectorAll('.fade-up').forEach(function(e){o.observe(e)})});
+</script>
+</body>
+</html>

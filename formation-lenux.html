@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formation LENUX – Méthode pour professionnels ASE | La Meute</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blanc:#fdfbf8;--creme:#f5f0e8;--creme-mid:#ede5d8;--bordeaux:#7d2d3e;--bordeaux-light:#a84059;--bordeaux-pale:#f2e4e7;--prune:#4a1a28;--terracotta:#c47855;--dore:#b8943a;--dore-pale:#f5edda;--sauge:#7a8c74;--ardoise:#2c2828;--ardoise-mid:#5a4f4a;--ardoise-light:#8a7f7a;--border:#e2d8cc}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;color:var(--ardoise);background:var(--blanc);font-weight:400;line-height:1.7;font-size:16px}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.2}
+a{color:var(--bordeaux);text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(253,251,248,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:100;padding:0 24px}
+nav .nav-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+nav .logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--ardoise)}
+nav .logo em{color:var(--bordeaux);font-style:italic}
+nav .nav-links{display:flex;align-items:center;gap:28px}
+nav .nav-links a{font-size:0.9rem;color:var(--ardoise-mid);font-weight:400;transition:color .2s}
+nav .nav-links a:hover{color:var(--bordeaux)}
+nav .nav-cta{background:var(--bordeaux);color:#fff!important;padding:8px 20px;border-radius:6px;font-weight:500;font-size:0.85rem;transition:background .2s}
+nav .nav-cta:hover{background:var(--bordeaux-light)}
+.menu-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--ardoise)}
+section{padding:100px 0}
+section.bg-creme{background:var(--creme)}
+.section-tag{display:inline-block;font-size:0.78rem;text-transform:uppercase;letter-spacing:2px;color:var(--bordeaux);font-weight:500;margin-bottom:12px}
+.section-title{font-size:2.4rem;margin-bottom:48px}
+.btn{display:inline-block;padding:14px 32px;border-radius:6px;font-weight:500;font-size:0.95rem;transition:all .2s;cursor:pointer;border:none}
+.btn-primary{background:var(--bordeaux);color:#fff}
+.btn-primary:hover{background:var(--bordeaux-light)}
+footer{background:var(--prune);color:rgba(255,255,255,0.6);padding:40px 0;text-align:center;font-size:0.85rem}
+footer p{margin-bottom:8px}
+footer a{color:rgba(255,255,255,0.6)}
+footer a:hover{color:#fff}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* HERO FORMATION */
+.hero-formation{background:var(--creme);padding:100px 0 80px;text-align:center}
+.hero-formation h1{font-size:3rem;margin-bottom:12px}
+.hero-formation .subtitle{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--ardoise-mid);font-style:italic;margin-bottom:24px}
+.hero-formation .desc{max-width:750px;margin:0 auto 40px;color:var(--ardoise-mid);line-height:1.8}
+.public-grid{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+.public-item{background:var(--blanc);border:1px solid var(--border);border-radius:10px;padding:16px 24px;font-size:0.9rem;display:flex;align-items:center;gap:10px}
+.public-item .icon{font-size:1.3rem}
+
+/* MODULES */
+.modules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.module-card{background:var(--blanc);border:1px solid var(--border);border-radius:12px;padding:40px 28px;position:relative;transition:transform .2s,box-shadow .2s}
+.module-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.06)}
+.module-card.featured{border-color:var(--bordeaux);border-width:2px}
+.module-num{font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--bordeaux);font-weight:600;margin-bottom:12px}
+.module-card h3{font-size:1.5rem;margin-bottom:16px}
+.module-meta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.module-meta span{background:var(--creme);padding:4px 12px;border-radius:20px;font-size:0.78rem;color:var(--ardoise-mid)}
+.module-card p{color:var(--ardoise-mid);font-size:0.95rem;line-height:1.7;margin-bottom:20px}
+.module-price{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--bordeaux)}
+
+/* POURQUOI */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.why-item{display:flex;gap:16px;align-items:start}
+.why-item .check{width:28px;height:28px;background:var(--bordeaux);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0;margin-top:2px}
+.why-item p{color:var(--ardoise-mid);line-height:1.7}
+
+/* CTA */
+.cta-section{background:var(--creme);padding:80px 0;text-align:center}
+.cta-section h2{font-size:2rem;margin-bottom:16px}
+.cta-section .note{font-size:0.9rem;color:var(--ardoise-light);margin-top:16px}
+
+@media(max-width:768px){
+  .menu-toggle{display:block}
+  nav .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--blanc);flex-direction:column;padding:20px;border-bottom:1px solid var(--border);gap:16px}
+  nav .nav-links.open{display:flex}
+  .hero-formation h1{font-size:2rem}
+  .modules-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .section-title{font-size:1.8rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">La <em>Meute</em></a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="index.html#offres">Offres</a>
+      <a href="apropos.html">À propos</a>
+      <a href="formation-lenux.html">Formation LENUX</a>
+      <a href="faq-enfants.html">FAQ Enfants</a>
+      <a href="faq-parents.html">FAQ Parents</a>
+      <a href="index.html#contact" class="nav-cta">Contacter Lena</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-formation fade-up">
+  <div class="container">
+    <h1>La Méthode LENUX</h1>
+    <p class="subtitle">Formation professionnelle en protection de l'enfance</p>
+    <p class="desc">Une méthode opérationnelle, éthique et transmissible pour analyser les situations complexes, sécuriser les écrits professionnels et préserver l'alliance avec les familles tout en tenant le cadre légal.</p>
+    <div class="public-grid">
+      <div class="public-item"><span class="icon">🎓</span> Étudiants IRTS / écoles de travail social</div>
+      <div class="public-item"><span class="icon">👥</span> Éducateurs spécialisés ASE / AEMO</div>
+      <div class="public-item"><span class="icon">🏢</span> Cadres de services et directions</div>
+      <div class="public-item"><span class="icon">💻</span> Présentiel (Alsace / Grand Est) ou distanciel</div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section class="fade-up">
+  <div class="container">
+    <p class="section-tag">Les 3 modules</p>
+    <h2 class="section-title">Choisissez votre niveau</h2>
+    <div class="modules-grid">
+      <div class="module-card">
+        <p class="module-num">Module 1</p>
+        <h3>Initiation</h3>
+        <div class="module-meta">
+          <span>3h30 ou 1 journée</span>
+          <span>Sans prérequis</span>
+        </div>
+        <p><strong>Public :</strong> étudiants et nouveaux professionnels.</p>
+        <p>Comprendre les biais institutionnels, sécuriser ses premiers écrits professionnels, poser les bases d'une posture éthique face aux familles.</p>
+        <p class="module-price">450 € → 900 € HT</p>
+      </div>
+      <div class="module-card featured">
+        <p class="module-num">Module 2</p>
+        <h3>Approfondissement</h3>
+        <div class="module-meta">
+          <span>1 à 2 journées</span>
+          <span>Éducateurs confirmés</span>
+        </div>
+        <p>Analyser les situations complexes, éviter les biais, préserver l'alliance avec les familles tout en tenant le cadre légal.</p>
+        <p>Cas pratiques, mises en situation, relecture d'écrits réels anonymisés.</p>
+        <p class="module-price">900 € → 1 800 € HT</p>
+      </div>
+      <div class="module-card">
+        <p class="module-num">Module 3</p>
+        <h3>Expertise &amp; Audit</h3>
+        <div class="module-meta">
+          <span>Mission 4 à 6 semaines</span>
+          <span>Cadres &amp; Directions</span>
+        </div>
+        <p>Audit de pratiques, accompagnement institutionnel, formation sur-mesure, transmission de la méthode en interne.</p>
+        <p>Un programme adapté à votre structure et vos enjeux spécifiques.</p>
+        <p class="module-price">3 000 € → 8 000 € HT</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI LENUX -->
+<section class="bg-creme fade-up">
+  <div class="container">
+    <h2 class="section-title">Pourquoi cette méthode change tout</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="check">✓</span>
+        <p><strong>Née de l'expérience terrain</strong> — pas seulement théorique. La méthode LENUX est construite à partir de situations réelles, vécues des deux côtés du système.</p>
+      </div>
+      <div class="why-item">
+        <span class="check">✓</span>
+        <p><strong>Double regard famille + institution</strong> — une perspective unique qui permet de comprendre les attentes, les peurs et les malentendus des deux parties.</p>
+      </div>
+      <div class="why-item">
+        <span class="check">✓</span>
+        <p><strong>Outils directement utilisables</strong> — le lendemain de la formation. Pas de théorie abstraite, mais des grilles, des trames et des réflexes concrets.</p>
+      </div>
+      <div class="why-item">
+        <span class="check">✓</span>
+        <p><strong>Adaptée au cadre légal français</strong> — chaque outil et chaque posture respecte le cadre juridique en vigueur en protection de l'enfance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section fade-up">
+  <div class="container">
+    <h2>Demander un programme détaillé</h2>
+    <a href="index.html#contact" class="btn btn-primary">Contacter Lena</a>
+    <p class="note">Réponse sous 48h · Devis gratuit et sans engagement</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Lena Roncari — La Meute est en Marche</p>
+    <p>Mentions légales · Politique de confidentialité</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){var o=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1});document.querySelectorAll('.fade-up').forEach(function(e){o.observe(e)})});
+</script>
+</body>
+</html>
