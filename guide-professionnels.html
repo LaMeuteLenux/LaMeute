@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide pour les professionnels – Travailler avec les familles | La Meute</title>
+  <meta name="description" content="Guide pratique pour les professionnels ASE, éducateurs et travailleurs sociaux. Sortir du jugement, comprendre les familles, réseaux sociaux, méthode LENUX." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blanc: #fdfbf8;
+      --creme: #f5f0e8;
+      --creme-mid: #ede5d8;
+      --bordeaux: #7d2d3e;
+      --bordeaux-pale: #f2e4e7;
+      --prune: #4a1a28;
+      --dore: #b8943a;
+      --dore-pale: #f5edda;
+      --sauge: #7a8c74;
+      --sauge-pale: #eaf0e8;
+      --ardoise: #2c2828;
+      --ardoise-mid: #5a4f4a;
+      --ardoise-light: #8a7f7a;
+      --border: #e2d8cc;
+      --shadow-soft: 0 4px 32px rgba(44,40,40,0.07);
+      --shadow-hover: 0 12px 48px rgba(44,40,40,0.13);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--blanc); color: var(--ardoise); font-size: 16px; line-height: 1.75; overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(253,251,248,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--ardoise); text-decoration: none; }
+    .nav-logo span { color: var(--bordeaux); font-style: italic; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ardoise-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--bordeaux); }
+    .nav-cta { background: var(--bordeaux) !important; color: #fff !important; padding: 10px 24px !important; border-radius: 40px !important; }
+    .nav-cta:hover { background: var(--prune) !important; }
+
+    /* BANNIÈRE */
+    .banniere { background: var(--bordeaux); color: #fff; text-align: center; padding: 14px 24px; font-size: 0.9rem; font-weight: 300; font-style: italic; margin-top: 68px; }
+
+    /* HERO */
+    .hero { background: var(--creme); padding: 70px 0 60px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -80px; right: -100px; width: 450px; height: 450px; background: radial-gradient(ellipse, rgba(242,228,231,0.7) 0%, transparent 70%); border-radius: 50%; }
+    .hero-inner { max-width: 820px; margin: 0 auto; padding: 0 48px; position: relative; z-index: 1; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+    .hero-eyebrow-line { width: 28px; height: 1.5px; background: var(--bordeaux); }
+    .hero-eyebrow-text { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bordeaux); }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.1; color: var(--ardoise); margin-bottom: 16px; }
+    .hero h1 em { font-style: italic; color: var(--bordeaux); font-weight: 300; }
+    .hero-sous { font-size: 1rem; font-weight: 500; color: var(--ardoise-mid); margin-bottom: 20px; }
+    .hero-desc { font-size: 1rem; color: var(--ardoise-mid); font-weight: 300; line-height: 1.85; max-width: 620px; }
+    .hero-desc strong { color: var(--ardoise); font-weight: 500; }
+
+    /* CONTAINER */
+    .container { max-width: 820px; margin: 0 auto; padding: 0 48px; }
+
+    /* SECTIONS */
+    .section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+    .section:last-of-type { border-bottom: none; }
+    .s-tag { display: inline-flex; align-items: center; gap: 10px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--bordeaux); margin-bottom: 12px; }
+    .s-tag::before { content: ''; width: 24px; height: 1px; background: var(--bordeaux); opacity: 0.4; }
+    .section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 600; color: var(--ardoise); line-height: 1.2; margin-bottom: 24px; }
+    .section h2 em { font-style: italic; color: var(--bordeaux); font-weight: 300; }
+    .section p { font-size: 0.95rem; color: var(--ardoise-mid); font-weight: 300; line-height: 1.85; margin-bottom: 16px; }
+    .section p strong { color: var(--ardoise); font-weight: 500; }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ENCADRÉS */
+    .encadre { background: var(--sauge-pale); border-left: 3px solid var(--sauge); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; font-size: 0.92rem; color: var(--ardoise); line-height: 1.75; }
+    .encadre strong { color: var(--sauge); }
+    .encadre-attention { background: var(--dore-pale); border-left: 3px solid var(--dore); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; font-size: 0.92rem; color: var(--ardoise); line-height: 1.75; }
+    .encadre-attention strong { color: var(--dore); }
+    .encadre-bordeaux { background: var(--bordeaux-pale); border-left: 3px solid var(--bordeaux); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; font-size: 0.92rem; color: var(--prune); line-height: 1.75; font-style: italic; }
+
+    /* LISTE */
+    .liste-points { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 10px; }
+    .liste-points li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.92rem; color: var(--ardoise-mid); font-weight: 300; line-height: 1.7; }
+    .liste-points li::before { content: '→'; color: var(--bordeaux); font-weight: 600; flex-shrink: 0; margin-top: 2px; }
+
+    /* QUESTIONS */
+    .questions-encart { background: var(--creme); border: 1px solid var(--border); border-radius: 14px; padding: 28px 32px; margin: 20px 0; }
+    .questions-encart h4 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; color: var(--bordeaux); margin-bottom: 14px; }
+    .questions-encart ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .questions-encart ul li { font-size: 0.88rem; color: var(--ardoise-mid); font-weight: 300; padding-left: 16px; position: relative; line-height: 1.6; }
+    .questions-encart ul li::before { content: '?'; position: absolute; left: 0; color: var(--bordeaux); font-weight: 700; font-size: 0.85rem; }
+
+    /* MODULES */
+    .modules-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+    .module-card { background: var(--creme); border: 1px solid var(--border); border-radius: 14px; padding: 28px 24px; transition: all 0.25s; }
+    .module-card:hover { border-color: var(--bordeaux-pale); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+    .module-nb { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; color: rgba(125,45,62,0.08); line-height: 1; margin-bottom: 10px; }
+    .module-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bordeaux); margin-bottom: 6px; }
+    .module-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--ardoise); margin-bottom: 8px; }
+    .module-card p { font-size: 0.85rem; color: var(--ardoise-mid); font-weight: 300; line-height: 1.65; margin-bottom: 12px; }
+    .module-tarif { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--ardoise); }
+
+    /* CTA */
+    .cta-section { padding: 88px 0; background: linear-gradient(160deg, var(--prune) 0%, var(--bordeaux) 100%); text-align: center; color: #fff; }
+    .cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; margin-bottom: 16px; }
+    .cta-section h2 strong { font-weight: 700; display: block; }
+    .cta-section p { color: rgba(255,255,255,0.65); font-size: 0.95rem; max-width: 480px; margin: 0 auto 40px; font-weight: 300; line-height: 1.8; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-blanc { display: inline-block; background: #fff; color: var(--bordeaux); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 36px; border-radius: 40px; text-decoration: none; transition: all 0.25s; }
+    .btn-blanc:hover { background: var(--creme); transform: translateY(-2px); }
+    .btn-contour-blanc { display: inline-block; border: 1.5px solid rgba(255,255,255,0.4); color: #fff; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 36px; border-radius: 40px; text-decoration: none; transition: all 0.25s; }
+    .btn-contour-blanc:hover { background: rgba(255,255,255,0.1); }
+
+    /* FOOTER */
+    footer { background: var(--prune); color: rgba(255,255,255,0.25); text-align: center; padding: 28px 48px; font-size: 0.78rem; line-height: 1.8; }
+    footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
+
+    /* FADE */
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .container { padding: 0 20px; }
+      .hero-inner { padding: 0 20px; }
+      .modules-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">La <span>Meute</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#offres">Offres</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="formation-lenux.html">Formation LENUX</a></li>
+    <li><a href="faq-enfants.html">FAQ Enfants</a></li>
+    <li><a href="faq-parents.html">FAQ Parents</a></li>
+    <li><a href="guide-professionnels.html">Guide Pros</a></li>
+    <li><a href="guide-institutions.html">Guide Écoles</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contacter Lena</a></li>
+  </ul>
+</nav>
+
+<div class="banniere">
+  « Ce guide est écrit par une femme qui a vécu le système de l'intérieur. Pas pour juger — pour ouvrir des portes. »
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <div class="hero-eyebrow-text">Guide pratique · Professionnels ASE / Éducation / Social</div>
+      <div class="hero-eyebrow-line"></div>
+    </div>
+    <h1>Intervenir dans une famille,<br>c'est entrer <em>dans une vie</em></h1>
+    <div class="hero-sous">Ce que les formations ne vous apprennent pas toujours</div>
+    <p class="hero-desc">Une intervention mal calibrée, un écrit professionnel trop hâtif, un jugement inconscient — et c'est <strong>une famille entière qui porte des séquelles à vie</strong>. Ce guide est là pour vous aider à faire autrement.</p>
+  </div>
+</section>
+
+<div style="background: var(--blanc); padding: 0;">
+
+  <div class="container">
+
+    <div class="section fade-up">
+      <div class="s-tag">Partie 1</div>
+      <h2>Sortir du jugement :<br>le défi de <em>chaque professionnel</em></h2>
+      <p>Nous portons tous des biais. Ils viennent de notre éducation, de notre culture, de nos propres expériences familiales. Quand on entre dans le foyer d'une famille fragilisée, ces biais s'activent <strong>sans qu'on s'en rende compte</strong>.</p>
+      <div class="encadre-bordeaux">
+        « Juger ce qu'on voit sans comprendre d'où ça vient, c'est se tromper de mission. Votre rôle n'est pas d'évaluer une famille à l'aune de vos propres normes — c'est d'évaluer si un enfant est en sécurité. »
+      </div>
+      <div class="questions-encart">
+        <h4>Questions à se poser avant de rédiger un rapport</h4>
+        <ul>
+          <li>Est-ce que ce que j'observe choque mes valeurs personnelles ou met réellement l'enfant en danger ?</li>
+          <li>Est-ce que je connais le parcours de cette famille avant de conclure ?</li>
+          <li>Est-ce que j'ai donné à cette famille la possibilité de s'expliquer ?</li>
+          <li>Mes mots dans ce rapport sont-ils factuels ou interprétatifs ?</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section fade-up">
+      <div class="s-tag">Partie 2</div>
+      <h2>Chaque famille a une histoire.<br><em>Elle détermine tout.</em></h2>
+      <p>Une mère qui ne regarde pas dans les yeux lors d'un entretien — est-ce de l'indifférence ou une marque culturelle de respect ? Un père absent lors d'une visite à domicile — est-ce du désintérêt ou des horaires de travail contraints ?</p>
+      <p>Le vécu d'une famille — migrations, violences, précarité, deuils, parcours institutionnels antérieurs — <strong>conditionne chacune de ses réactions face à vous</strong>. Ce n'est pas de la mauvaise volonté. C'est de la survie.</p>
+      <div class="encadre">
+        <strong>À retenir :</strong> Avant de conclure, cherchez à comprendre. Un dossier ne contient jamais toute une vie.
+      </div>
+      <ul class="liste-points">
+        <li>Prendre le temps d'explorer le parcours migratoire ou culturel de la famille</li>
+        <li>Comprendre les traumatismes institutionnels antérieurs</li>
+        <li>Ne pas confondre pauvreté et négligence, précarité et maltraitance</li>
+        <li>Adapter sa communication au niveau de compréhension et à la langue de la famille</li>
+        <li>Reconnaître la résilience là où on cherche la défaillance</li>
+      </ul>
+    </div>
+
+    <div class="section fade-up">
+      <div class="s-tag">Partie 3</div>
+      <h2>TikTok, Instagram, Nasdas :<br><em>un angle mort professionnel</em></h2>
+      <p>Les familles que vous accompagnez vivent en partie dans un monde numérique que beaucoup de professionnels méconnaissent. Des influenceurs comme <strong>Nasdas</strong> cumulent des millions de vues en parlant de famille, de maternité, de conflits avec les services sociaux — souvent sans nuance, parfois avec des conseils dangereux.</p>
+      <p><strong>Ce que ça change pour vous :</strong></p>
+      <ul class="liste-points">
+        <li>Une mère peut arriver à votre entretien avec des "informations" vues sur TikTok sur ses droits ou les pratiques ASE</li>
+        <li>Un jeune peut avoir une vision totalement faussée de ce qu'est un foyer ou une famille d'accueil</li>
+        <li>Une famille peut se mettre en danger en suivant des conseils d'influenceurs sans formation juridique</li>
+        <li>Des groupes privés sur les réseaux conseillent comment "contrer" les services sociaux</li>
+      </ul>
+      <div class="encadre-attention">
+        <strong>Attention :</strong> L'ignorance de ce monde numérique de votre part peut créer une fracture de confiance avec les familles. Ce n'est plus une option de s'y intéresser — c'est une nécessité professionnelle.
+      </div>
+      <p>Ce n'est pas à ignorer, c'est à intégrer : demandez aux familles d'où viennent leurs informations. Ne balayez pas d'un revers de main ce qu'elles ont vu en ligne — expliquez, nuancez, redirigez.</p>
+    </div>
+
+    <div class="section fade-up">
+      <div class="s-tag">Partie 4</div>
+      <h2>Vous n'êtes pas juste un professionnel.<br><em>Vous êtes un souvenir.</em></h2>
+      <p>Des adultes de 30, 40, 50 ans se souviennent encore du ton de l'éducateur qui est entré chez eux quand ils avaient 8 ans. Du regard de l'assistante sociale lors de la séparation. Des mots écrits dans un rapport qu'ils ont lu des années plus tard.</p>
+      <p>Une intervention bienveillante et respectueuse peut être <strong>une ancre positive pour toute une vie</strong>. Une intervention maladroite, condescendante ou trop rapide peut devenir un traumatisme supplémentaire — et compromettre toute relation de confiance future avec les institutions.</p>
+      <div class="encadre-bordeaux">
+        « Ce que vous faites a un poids que vous ne mesurez peut-être pas toujours. C'est pour ça que la formation continue, la supervision et l'humilité professionnelle ne sont pas des options — ce sont des obligations éthiques. »<br>
+        <span style="font-size:0.82rem; opacity:0.7; font-style:normal;">— Lena Roncari</span>
+      </div>
+    </div>
+
+    <div class="section fade-up">
+      <div class="s-tag">Aller plus loin</div>
+      <h2>Un outil concret :<br>la <em>Méthode LENUX</em></h2>
+      <p>La méthode LENUX est une formation opérationnelle pour analyser les situations complexes, sécuriser les écrits professionnels et préserver l'alliance avec les familles tout en tenant le cadre légal.</p>
+      <div class="modules-grid">
+        <div class="module-card">
+          <div class="module-nb">01</div>
+          <div class="module-label">Module 1</div>
+          <h3>Initiation</h3>
+          <p>3h30 ou 1 journée · Sans prérequis. Pour étudiants et nouveaux professionnels.</p>
+          <div class="module-tarif">450 € → 900 € <small style="font-family:'Jost';font-size:0.75rem;font-weight:300;color:var(--ardoise-light);">HT</small></div>
+        </div>
+        <div class="module-card">
+          <div class="module-nb">02</div>
+          <div class="module-label">Module 2</div>
+          <h3>Approfondissement</h3>
+          <p>1 à 2 journées · Éducateurs confirmés. Situations complexes et écrits.</p>
+          <div class="module-tarif">900 € → 1 800 € <small style="font-family:'Jost';font-size:0.75rem;font-weight:300;color:var(--ardoise-light);">HT</small></div>
+        </div>
+        <div class="module-card">
+          <div class="module-nb">03</div>
+          <div class="module-label">Module 3</div>
+          <h3>Expertise & Audit</h3>
+          <p>4 à 6 semaines · Cadres & Directions. Audit et transmission interne.</p>
+          <div class="module-tarif">3 000 € → 8 000 € <small style="font-family:'Jost';font-size:0.75rem;font-weight:300;color:var(--ardoise-light);">HT</small></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="cta-section">
+  <div class="container">
+    <h2 class="fade-up">Vous voulez<br><strong>aller plus loin ?</strong></h2>
+    <p class="fade-up">La méthode LENUX est une formation complète pour les professionnels qui veulent sécuriser leurs pratiques et leurs écrits. Disponible en présentiel en Alsace / Grand Est ou en distanciel.</p>
+    <div class="cta-btns fade-up">
+      <a href="formation-lenux.html" class="btn-blanc">Découvrir la formation LENUX</a>
+      <a href="index.html#contact" class="btn-contour-blanc">Contacter Lena</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Lena Roncari — <em>La Meute est en Marche</em></p>
+  <p style="margin-top:6px;"><a href="#">Mentions légales</a> · <a href="#">Politique de confidentialité</a></p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
