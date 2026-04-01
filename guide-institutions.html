@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide écoles et institutions – Relation parents familles | La Meute LENUX</title>
+  <meta name="description" content="Guide pratique pour les écoles et institutions. Relation parents-institution, place de la famille, réseaux sociaux, faire intervenir Lena Roncari." />
+    <meta name="keywords" content="relation parents école institution, famille institution travail social, signalement enfant danger, réseaux sociaux jeunes protection enfance, intervention établissement ASE" />
+  <meta name="description" content="Guide pour les écoles et institutions. Travailler avec les familles, place des parents, réseaux sociaux et jeunes. Faire intervenir LENUX dans votre établissement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blanc: #fdfbf8;
+      --creme: #f5f0e8;
+      --creme-mid: #ede5d8;
+      --bordeaux: #7d2d3e;
+      --bordeaux-pale: #f2e4e7;
+      --prune: #4a1a28;
+      --dore: #b8943a;
+      --dore-pale: #f5edda;
+      --sauge: #7a8c74;
+      --sauge-pale: #eaf0e8;
+      --ardoise: #2c2828;
+      --ardoise-mid: #5a4f4a;
+      --ardoise-light: #8a7f7a;
+      --border: #e2d8cc;
+      --shadow-soft: 0 4px 32px rgba(44,40,40,0.07);
+      --shadow-hover: 0 12px 48px rgba(44,40,40,0.13);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--blanc); color: var(--ardoise); font-size: 16px; line-height: 1.75; overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(253,251,248,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--ardoise); text-decoration: none; }
+    .nav-logo span { color: var(--bordeaux); font-style: italic; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ardoise-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--bordeaux); }
+    .nav-cta { background: var(--bordeaux) !important; color: #fff !important; padding: 10px 24px !important; border-radius: 40px !important; }
+    .nav-cta:hover { background: var(--prune) !important; }
+
+    .hero { background: var(--creme); padding: 138px 0 60px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -80px; right: -100px; width: 450px; height: 450px; background: radial-gradient(ellipse, rgba(242,228,231,0.7) 0%, transparent 70%); border-radius: 50%; }
+    .hero-inner { max-width: 820px; margin: 0 auto; padding: 0 48px; position: relative; z-index: 1; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+    .hero-eyebrow-line { width: 28px; height: 1.5px; background: var(--bordeaux); }
+    .hero-eyebrow-text { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bordeaux); }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.1; color: var(--ardoise); margin-bottom: 16px; }
+    .hero h1 em { font-style: italic; color: var(--bordeaux); font-weight: 300; }
+    .hero-sous { font-size: 1rem; font-weight: 500; color: var(--ardoise-mid); margin-bottom: 20px; }
+    .hero-desc { font-size: 1rem; color: var(--ardoise-mid); font-weight: 300; line-height: 1.85; max-width: 620px; }
+    .hero-desc strong { color: var(--ardoise); font-weight: 500; }
+
+    .container { max-width: 820px; margin: 0 auto; padding: 0 48px; }
+
+    .section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+    .section:last-of-type { border-bottom: none; }
+    .s-tag { display: inline-flex; align-items: center; gap: 10px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--bordeaux); margin-bottom: 12px; }
+    .s-tag::before { content: ''; width: 24px; height: 1px; background: var(--bordeaux); opacity: 0.4; }
+    .section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 600; color: var(--ardoise); line-height: 1.2; margin-bottom: 24px; }
+    .section h2 em { font-style: italic; color: var(--bordeaux); font-weight: 300; }
+    .section p { font-size: 0.95rem; color: var(--ardoise-mid); font-weight: 300; line-height: 1.85; margin-bottom: 16px; }
+    .section p strong { color: var(--ardoise); font-weight: 500; }
+
+    .encadre { background: var(--sauge-pale); border-left: 3px solid var(--sauge); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; font-size: 0.92rem; color: var(--ardoise); line-height: 1.75; }
+    .encadre strong { color: var(--sauge); }
+    .encadre-attention { background: var(--dore-pale); border-left: 3px solid var(--dore); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; font-size: 0.92rem; color: var(--ardoise); line-height: 1.75; }
+    .encadre-attention strong { color: var(--dore); }
+    .encadre-bordeaux { background: var(--bordeaux-pale); border-left: 3px solid var(--bordeaux); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 20px 0; font-size: 0.92rem; color: var(--prune); line-height: 1.75; font-style: italic; }
+
+    .liste-points { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 10px; }
+    .liste-points li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.92rem; color: var(--ardoise-mid); font-weight: 300; line-height: 1.7; }
+    .liste-points li::before { content: '→'; color: var(--bordeaux); font-weight: 600; flex-shrink: 0; margin-top: 2px; }
+
+    .themes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 24px 0; }
+    .theme-card { background: var(--creme); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+    .theme-emoji { font-size: 1.4rem; margin-bottom: 10px; display: block; }
+    .theme-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--ardoise); margin-bottom: 6px; }
+    .theme-card p { font-size: 0.85rem; color: var(--ardoise-mid); font-weight: 300; line-height: 1.6; margin: 0; }
+
+    .cta-section { padding: 88px 0; background: linear-gradient(160deg, var(--prune) 0%, var(--bordeaux) 100%); text-align: center; color: #fff; }
+    .cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; margin-bottom: 16px; }
+    .cta-section h2 strong { font-weight: 700; display: block; }
+    .cta-section p { color: rgba(255,255,255,0.65); font-size: 0.95rem; max-width: 480px; margin: 0 auto 40px; font-weight: 300; line-height: 1.8; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-blanc { display: inline-block; background: #fff; color: var(--bordeaux); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 36px; border-radius: 40px; text-decoration: none; transition: all 0.25s; }
+    .btn-blanc:hover { background: var(--creme); transform: translateY(-2px); }
+    .btn-contour-blanc { display: inline-block; border: 1.5px solid rgba(255,255,255,0.4); color: #fff; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 36px; border-radius: 40px; text-decoration: none; transition: all 0.25s; }
+    .btn-contour-blanc:hover { background: rgba(255,255,255,0.1); }
+
+    footer { background: var(--prune); color: rgba(255,255,255,0.25); text-align: center; padding: 28px 48px; font-size: 0.78rem; line-height: 1.8; }
+    footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
+
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .container { padding: 0 20px; }
+      .hero-inner { padding: 0 20px; }
+      .themes-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">La <span>Meute</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#offres">Offres</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="formation-lenux.html">Formation LENUX</a></li>
+    <li><a href="faq-enfants.html">FAQ Enfants</a></li>
+    <li><a href="faq-parents.html">FAQ Parents</a></li>
+    <li><a href="guide-professionnels.html">Guide Pros</a></li>
+    <li><a href="guide-institutions.html">Guide Écoles</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contacter Lena</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <div class="hero-eyebrow-text">Guide pratique · Écoles · Institutions · Établissements</div>
+      <div class="hero-eyebrow-line"></div>
+    </div>
+    <h1>La famille n'est pas<br><em>votre adversaire</em></h1>
+    <div class="hero-sous">Travailler ensemble pour l'intérêt de l'enfant</div>
+    <p class="hero-desc">Trop souvent, l'école et les institutions se retrouvent en opposition avec les parents. <strong>Cette opposition nuit à l'enfant — toujours.</strong> Ce guide propose des pistes concrètes pour inverser cette dynamique.</p>
+  </div>
+</section>
+
+<div style="background: var(--blanc);">
+  <div class="container">
+
+    <div class="section fade-up">
+      <div class="s-tag">Partie 1</div>
+      <h2>Comprendre pourquoi<br>les parents se <em>méfient de vous</em></h2>
+      <p>Beaucoup de familles arrivent dans vos locaux avec une histoire institutionnelle douloureuse. Ils ont déjà été jugés, mal entendus, mal orientés. <strong>Leur méfiance n'est pas de l'hostilité — c'est de la protection.</strong></p>
+      <p>Ce que les institutions projettent souvent sans le savoir :</p>
+      <ul class="liste-points">
+        <li>Le pouvoir — vous pouvez signaler, orienter, décider de choses qui les dépassent</li>
+        <li>Le jugement — vos locaux, votre langage, votre posture peuvent intimider</li>
+        <li>L'exclusion — un parent qui ne maîtrise pas le français ou les codes scolaires se sent très vite invisible</li>
+      </ul>
+      <div class="encadre">
+        <strong>À retenir :</strong> Un parent qui ne vient pas aux réunions n'est pas forcément un parent démissionnaire. Il est peut-être épuisé, intimidé, ou il a appris que ces réunions ne servaient à rien pour lui.
+      </div>
+    </div>
+
+    <div class="section fade-up">
+      <div class="s-tag">Partie 2</div>
+      <h2>La place de la famille :<br><em>ensemble</em> et non contre</h2>
+      <p>On ne peut pas aider un enfant en ignorant ou en fragilisant sa famille. Même dans les situations les plus complexes, la famille reste le premier ancrage identitaire de l'enfant. <strong>La dévaloriser devant lui, c'est le dévaloriser lui.</strong></p>
+      <p>Principes concrets à appliquer au quotidien :</p>
+      <ul class="liste-points">
+        <li>Parler des parents en termes respectueux devant l'enfant, même en cas de conflit</li>
+        <li>Inviter les parents comme partenaires et non comme justiciables</li>
+        <li>Expliquer vos démarches avant de les entreprendre</li>
+        <li>Ne jamais prendre de décision importante sans en informer la famille au préalable</li>
+        <li>Valoriser ce que la famille fait bien, pas seulement pointer ce qui ne va pas</li>
+      </ul>
+      <div class="encadre-bordeaux">
+        « Un enfant qui entend ses parents critiqués par l'institution est un enfant qui apprend à se méfier du monde. Ce n'est pas ce qu'on veut pour lui. »<br>
+        <span style="font-size:0.82rem; opacity:0.7; font-style:normal;">— Lena Roncari</span>
+      </div>
+    </div>
+
+    <div class="section fade-up">
+      <div class="s-tag">Partie 3</div>
+      <h2>Les réseaux sociaux :<br>un danger <em>sous-estimé</em></h2>
+      <p>Les enfants, les adolescents et leurs familles consomment des contenus qui façonnent leur vision de la famille, de l'autorité, des institutions. Et souvent, ces contenus véhiculent des messages qui <strong>fragilisent le lien famille-institution.</strong></p>
+      <ul class="liste-points">
+        <li>Des influenceurs diffusent des discours anti-institution très suivis par les jeunes et les parents</li>
+        <li>Des groupes Facebook ou TikTok conseillent comment "contrer" l'école ou l'ASE</li>
+        <li>Les enfants confiés à l'ASE sont particulièrement vulnérables à ces contenus</li>
+        <li>Les professionnels qui ne connaissent pas ces espaces perdent le contact avec la réalité des familles</li>
+      </ul>
+      <div class="encadre-attention">
+        <strong>À faire :</strong> Intégrer la question du numérique dans vos échanges avec les familles. Proposer des ateliers parents sur les réseaux sociaux. Ne pas ignorer ce que les enfants ont vu en ligne — en parler ouvertement.
+      </div>
+    </div>
+
+    <div class="section fade-up">
+      <div class="s-tag">Partie 4</div>
+      <h2>Le signalement :<br><em>dernier recours</em>, pas premier réflexe</h2>
+      <p>Un signalement change une vie. Parfois il la sauve. Parfois il la brise. Il doit être <strong>réfléchi, documenté, et accompagné d'une tentative préalable de dialogue</strong> avec la famille — sauf danger immédiat.</p>
+      <p>Avant de signaler, posez-vous ces questions :</p>
+      <ul class="liste-points">
+        <li>Avez-vous parlé directement à la famille de vos inquiétudes ?</li>
+        <li>Avez-vous sollicité le référent ASE de l'établissement ou de la commune ?</li>
+        <li>Avez-vous documenté vos observations de façon factuelle et non interprétative ?</li>
+        <li>Avez-vous consulté un collègue ou votre hiérarchie avant de conclure ?</li>
+      </ul>
+      <div class="encadre">
+        <strong>Important :</strong> Signaler sans préparer la famille quand c'est possible, c'est souvent détruire définitivement la relation de confiance — et donc votre capacité à protéger cet enfant sur le long terme.
+      </div>
+    </div>
+
+    <div class="section fade-up">
+      <div class="s-tag">Faire intervenir Lena</div>
+      <h2>Une intervention qui<br><em>change les regards</em></h2>
+      <p>Lena intervient dans les écoles, lycées professionnels, instituts de formation en travail social, structures ASE et services de protection de l'enfance. Son double regard — famille et institution — crée des <strong>prises de conscience durables chez les équipes.</strong></p>
+      <div class="themes-grid">
+        <div class="theme-card">
+          <span class="theme-emoji">🤝</span>
+          <h4>Relation famille-institution</h4>
+          <p>Comprendre les résistances, construire la confiance, travailler ensemble</p>
+        </div>
+        <div class="theme-card">
+          <span class="theme-emoji">👨‍👩‍👧</span>
+          <h4>Place des parents</h4>
+          <p>La famille comme partenaire dans la scolarité des enfants confiés à l'ASE</p>
+        </div>
+        <div class="theme-card">
+          <span class="theme-emoji">📱</span>
+          <h4>Réseaux sociaux</h4>
+          <p>Comprendre les espaces numériques des familles et leur impact sur la protection de l'enfance</p>
+        </div>
+        <div class="theme-card">
+          <span class="theme-emoji">📝</span>
+          <h4>Écrits professionnels</h4>
+          <p>Réduire les biais institutionnels dans les rapports et signalements</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="cta-section">
+  <div class="container">
+    <h2 class="fade-up">Vous voulez que Lena<br><strong>intervienne chez vous ?</strong></h2>
+    <p class="fade-up">Conférence, journée de sensibilisation, formation d'équipe — sur devis, en Alsace / Grand Est ou en distanciel.</p>
+    <div class="cta-btns fade-up">
+      <a href="index.html#contact" class="btn-blanc">Demander une intervention</a>
+      <a href="formation-lenux.html" class="btn-contour-blanc">Voir la formation LENUX</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Lena Roncari — <em>La Meute est en Marche</em></p>
+  <p style="margin-top:6px;"><a href="#">Mentions légales</a> · <a href="#">Politique de confidentialité</a></p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
